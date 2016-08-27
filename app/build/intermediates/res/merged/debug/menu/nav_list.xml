@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="홈">
+    <menu>
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/storybook"
+            android:title="메인" />
+    </menu>
+    </item>
+
+    <item android:title="동화책">
+        <menu>
+        <item
+            android:id="@+id/nav_storybook"
+            android:icon="@drawable/storybook"
+            android:title="동화책" />
+        </menu>
+    </item>
+    <item android:title="정서">
+        <menu>
+            <item
+                android:id="@+id/nav_emotion_list"
+                android:icon="@drawable/list"
+                android:title="리스트" />
+            <item
+                android:id="@+id/nav_emotion_happy"
+                android:icon="@drawable/smile"
+                android:title="행복" />
+            <item
+                android:id="@+id/nav_emotion_sad"
+                android:icon="@drawable/crying"
+                android:title="슬픔" />
+        </menu>
+    </item>
+
+    <item android:title="설정">
+        <menu>
+        <item
+            android:id="@+id/nav_setting"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="설정" />
+        </menu>
+    </item>
+
+    <group android:title="미정">
+        <item
+            android:id="@+id/nav_btn4"
+            android:title="4번" />
+        <item
+            android:id="@+id/nav_btn5"
+            android:title="5번" />
+    </group>
+</menu>

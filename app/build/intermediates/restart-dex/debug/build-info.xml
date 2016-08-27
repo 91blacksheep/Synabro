@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instant-run
+    abi="arm64-v8a,armeabi-v7a,armeabi"
+    api-level="23"
+    density="xxxhdpi"
+    format="7"
+    timestamp="8784250560964"
+    token="2344968466161198583" >
+
+    <task
+        name="javac"
+        duration="844" />
+    <task
+        name="instant-run-dex"
+        duration="0" />
+    <task
+        name="instant-run-transform"
+        duration="146" />
+    <task
+        name="verifier"
+        duration="19" />
+
+    <artifact
+        location="D:\120111615\android\Android_Synabro\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_4\classes.dex"
+        type="DEX" />
+
+    <build timestamp="4541423080298" >
+        <artifact
+            location="D:\120111615\android\Android_Synabro\app\build\outputs\apk\app-debug.apk"
+            type="MAIN" />
+    </build>
+    <build timestamp="8580356550292" >
+        <artifact
+            location="D:\120111615\android\Android_Synabro\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_3\classes.dex"
+            type="DEX" />
+    </build>
+    <build timestamp="8784250560964" >
+        <artifact
+            location="D:\120111615\android\Android_Synabro\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_4\classes.dex"
+            type="DEX" />
+    </build>
+    <build timestamp="30891168750898" >
+        <artifact
+            location="D:\120111615\android\Android_Synabro\app\build\outputs\apk\app-debug.apk"
+            type="MAIN" />
+    </build>
+
+</instant-run>

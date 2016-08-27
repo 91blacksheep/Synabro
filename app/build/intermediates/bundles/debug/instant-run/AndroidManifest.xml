@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.user.first"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="17"
+        android:targetSdkVersion="23" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name="com.android.tools.fd.runtime.BootstrapApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <activity android:name="com.example.user.first.MainActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.user.first.Loading.Client.CLoading" />
+        <activity android:name="com.example.user.first.Home.CHome" />
+        <activity android:name="com.example.user.first.Emotion.CEmotion_List" />
+        <activity android:name="com.example.user.first.Setting.CSetting_List" />
+        <activity android:name="com.example.user.first.Emotion.CHappy" />
+        <activity android:name="com.example.user.first.Emotion.CSad" />
+        <activity android:name="com.example.user.first.Emotion.CAnger" />
+        <activity android:name="com.example.user.first.Emotion.CDisGust" />
+        <activity android:name="com.example.user.first.Emotion.CPanic" />
+        <activity android:name="com.example.user.first.Story.StoryList.View.CStoryListClient" />
+        <activity android:name="com.example.user.first.Story.Story.PlayerView.CStory_Player" />
+        <activity android:name="com.example.user.first.UiSetting.CMyText" />
+    </application>
+
+</manifest>
