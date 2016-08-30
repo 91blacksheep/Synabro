@@ -1,3 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
 
+    <item
+        jar="C:\Users\GuestUser\AppData\Local\Android\Sdk\extras\android\m2repository\com\android\support\support-annotations\23.4.0\support-annotations-23.4.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="D:\Project\Android\jangho\Synabro\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.4.0_eb32d88e2a7c522af30a49e39f8ad8117b0a0c54\classes.dex" />
+    </item>
+    <item
+        jar="D:\Project\Android\jangho\Synabro\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="D:\Project\Android\jangho\Synabro\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.4.0_3186b834754deb79d592616b5b7a88c526a1c81b\classes.dex" />
+    </item>
+    <item
+        jar="D:\Project\Android\jangho\Synabro\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="7295f503f005a1499e64b5adea5aa93d6232ba63">
+        <dex dex="D:\Project\Android\jangho\Synabro\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_aae520396e12f9d1ac10f821e7ce7835dc854109\classes.dex" />
+    </item>
+    <item
+        jar="D:\Project\Android\jangho\Synabro\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="D:\Project\Android\jangho\Synabro\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-23.4.0_14a5385299e4162ad194d5a8044d066ed510587f\classes.dex" />
+    </item>
+    <item
+        jar="D:\Project\Android\jangho\Synabro\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="7bb6ece4764db07d64a9da48958834a69cbcf464">
+        <dex dex="D:\Project\Android\jangho\Synabro\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_d677c22cfc3f9a68b40465cd34e362df86d7df4b\classes.dex" />
+    </item>
+    <item
+        jar="D:\Project\Android\jangho\Synabro\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
+        <dex dex="D:\Project\Android\jangho\Synabro\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-23.4.0_5bef7f236a3ad867a89dd3d91984da131542ce56\classes.dex" />
+    </item>
+    <item
+        jar="D:\Project\Android\jangho\Synabro\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\libs\internal_impl-23.4.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="D:\Project\Android\jangho\Synabro\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.4.0_ddbaa0945b4ca87a736648458cf41d289b61cc45\classes.dex" />
+    </item>
+    <item
+        jar="D:\Project\Android\jangho\Synabro\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="D:\Project\Android\jangho\Synabro\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-23.4.0_d23a635ac500513c60772be9766c1bd985fc5d5e\classes.dex" />
+    </item>
+    <item
+        jar="D:\Project\Android\jangho\Synabro\app\build\intermediates\exploded-aar\com.android.support\design\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="5326d9a850d491714fef8cbfaa9ea3416f0bf0d2">
+        <dex dex="D:\Project\Android\jangho\Synabro\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-23.4.0_07d70038632cecdce92dc109631f1cb2444bd572\classes.dex" />
+    </item>
+    <item
+        jar="D:\Project\Android\jangho\Synabro\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="D:\Project\Android\jangho\Synabro\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-23.4.0_dbd4addb29f088ad2c51b019d34c83fb8573d9ae\classes.dex" />
+    </item>
+    <item
+        jar="D:\Project\Android\jangho\Synabro\app\Lib\YouTubeAndroidPlayerApi.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="3c4f96ff493456651cc7bdb0b47e10eb25545a16">
+        <dex dex="D:\Project\Android\jangho\Synabro\app\build\intermediates\transforms\dex\debug\folders\1000\2\YouTubeAndroidPlayerApi_d29e8bc038686e03b44f4a09d6339d7be775ccf0\classes.dex" />
+    </item>
+
+</items>

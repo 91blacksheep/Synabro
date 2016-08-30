@@ -53,7 +53,7 @@ public class CStoryListClient extends AppCompatActivity implements NavigationVie
     }
 
     /* value */
-    final String url = "https://www.youtube.com/watch?v=";
+    //final String url = "https://www.youtube.com/watch?v=";
 
 
     CBSListview cBSListview;
@@ -85,11 +85,11 @@ public class CStoryListClient extends AppCompatActivity implements NavigationVie
 
         CItem cItem = new CItem();
         cItem.m_thumbnail = "LEnsRQLB4DU";
-        cItem.m_title = "까만구름, 하얀구름아";
+        cItem.m_title = "세모야 굴러봐";
         cItem.m_ex = "▶ 우울한 마음";
-        cItem.m_url = url+"i1jSCpo1Vq0";
+        cItem.m_url = "Z1pgXANlTpA";
         cItem.m_group = "내적";
-        cItem.m_type = "우울";
+        cItem.m_type = "미움";
 
         CWebInterface.CData cData =  CWebInterface.GetInstance().Find("Img1");
         cItem.bmpIcon = BitmapFactory.decodeByteArray(cData.byteData, 0, cData.byteData.length);
@@ -101,12 +101,8 @@ public class CStoryListClient extends AppCompatActivity implements NavigationVie
         cBSListview.SetAdapter();
 
 
-
-
-
-
         /* 네비게이션 드로어 초기화 */
-        //SetNav();
+        SetNav();
 
         navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
@@ -121,7 +117,7 @@ public class CStoryListClient extends AppCompatActivity implements NavigationVie
 
         /* 리스트 아이템 Init*/
         //listView.setAdapter(cStoryList);
-        //listView.setOnItemClickListener(mItemClickListener);
+        listView.setOnItemClickListener(mItemClickListener);
     }
 
     CBSListviewAdapter.Draw OnDraw = new CBSListviewAdapter.Draw()
@@ -176,8 +172,7 @@ public class CStoryListClient extends AppCompatActivity implements NavigationVie
 
     public void onClickButton(View v)
     {
-        /*
-        switch(v.getId())
+        /*switch(v.getId())
         {
             case R.id.btnAll:
                 cStoryList.OnClickTapAll();
@@ -194,8 +189,7 @@ public class CStoryListClient extends AppCompatActivity implements NavigationVie
             case R.id.btnTop:
                 listView.smoothScrollToPosition(0);
                 break;
-        }
-        */
+        }*/
     }
 
     private AdapterView.OnItemClickListener mItemClickListener = new AdapterView.OnItemClickListener()
@@ -203,10 +197,10 @@ public class CStoryListClient extends AppCompatActivity implements NavigationVie
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long l_position)
         {
-            CStoryData item = (CStoryData)parent.getItemAtPosition(position);
+            CItem item = (CItem)parent.getItemAtPosition(position);
 
-            String url = item.Get_url();
-            String type = item.Get_type();
+            String url = item.m_url;
+            String type = item.m_type;
 
             Intent intent = new Intent(getApplicationContext(), CStory_Player.class);
             intent.putExtra("url", url);

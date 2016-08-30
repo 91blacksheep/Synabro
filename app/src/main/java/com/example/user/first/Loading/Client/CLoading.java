@@ -15,8 +15,8 @@ import com.example.user.first.R;
  */
 public class CLoading extends AppCompatActivity
 {
-
-    final String img_url = "https://i.ytimg.com/vi/PaBwPRa__ic/hqdefault.jpg?custom=true&w=196&h=110&stc=true&jpg444=true&jpgq=90&sp=68&sigh=";
+    final String img_url1 = "https://i.ytimg.com/vi/";
+    final String img_url2 = "/hqdefault.jpg?custom=true&w=196&h=110&stc=true&jpg444=true&jpgq=90&sp=68&sigh=";
 
     TextView TView;
     String str;
@@ -38,21 +38,12 @@ public class CLoading extends AppCompatActivity
 
         CWebInterface.GetInstance().Enter();
 
-        CWebInterface.GetInstance().Request("Img1",img_url+"LEnsRQLB4DU");
-        CWebInterface.GetInstance().Request("Img2",img_url+"LEnsRQLB4DU");
-        CWebInterface.GetInstance().Request("Img3",img_url+"LEnsRQLB4DU");
-        CWebInterface.GetInstance().Request("Img4",img_url+"LEnsRQLB4DU");
-        CWebInterface.GetInstance().Request("Img5",img_url+"LEnsRQLB4DU");
-        CWebInterface.GetInstance().Request("Img6",img_url+"LEnsRQLB4DU");
-        CWebInterface.GetInstance().Request("Img7",img_url+"LEnsRQLB4DU");
-        CWebInterface.GetInstance().Request("Img8",img_url+"LEnsRQLB4DU");
-        CWebInterface.GetInstance().Request("Img9",img_url+"LEnsRQLB4DU");
-        CWebInterface.GetInstance().Request("Img10",img_url+"LEnsRQLB4DU");
-        CWebInterface.GetInstance().Request("Img11",img_url+"LEnsRQLB4DU");
-        CWebInterface.GetInstance().Request("Img12",img_url+"LEnsRQLB4DU");
-        CWebInterface.GetInstance().Request("Img13",img_url+"LEnsRQLB4DU");
-        CWebInterface.GetInstance().Request("Img14",img_url+"LEnsRQLB4DU");
-        CWebInterface.GetInstance().Request("Img15",img_url+"LEnsRQLB4DU");
+        CWebInterface.GetInstance().Request("Img1",img_url1+ "Z1pgXANlTpA" + img_url2 + "xepddd37db0XArMi49LZlYHV6N4");
+        CWebInterface.GetInstance().Request("Img1",img_url1+ "JwGCwxl1jEg" + img_url2 + "6r8zj-eF6THa0VgQvLJM7tJGO-U");
+        CWebInterface.GetInstance().Request("Img1",img_url1+ "1n73jHf48gc" + img_url2 + "2ih4gpzbIOduHl_wza-ZYjLnTeY");
+        CWebInterface.GetInstance().Request("Img1",img_url1+ "eHlSmYmpln0" + img_url2 + "zSQNEOzvBsNsT3-CR2taQg5ZA88");
+        CWebInterface.GetInstance().Request("Img1",img_url1+ "NKdz3G8fgQ4" + img_url2 + "cPuYeUBqheQdO0omsWn4QPgmiKc");
+        CWebInterface.GetInstance().Request("Img1",img_url1+ "sfsXNdKRWXg" + img_url2 + "SG_v4uWRY_BM16prvpKeme4A520");
 
         CWebInterface.GetInstance().SetRequestCallback(new CWebInterface.RequestCallback()
         {
