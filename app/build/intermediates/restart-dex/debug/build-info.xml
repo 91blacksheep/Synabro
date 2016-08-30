@@ -4,45 +4,56 @@
     api-level="23"
     density="xxxhdpi"
     format="7"
-    timestamp="8784250560964"
-    token="2344968466161198583" >
+    timestamp="11942949170107"
+    token="6519687219084269059"
+    verifier="R_CLASS_CHANGE" >
 
     <task
         name="javac"
-        duration="844" />
+        duration="547" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="146" />
+        duration="223" />
     <task
         name="verifier"
-        duration="19" />
+        duration="41" />
 
     <artifact
-        location="D:\120111615\android\Android_Synabro\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_4\classes.dex"
+        location="D:\Project\Android\jangho\Synabro\app\build\intermediates\res\resources-debug.ap_"
+        type="RESOURCES" />
+    <artifact
+        location="D:\Project\Android\jangho\Synabro\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_4\classes.dex"
+        type="DEX" />
+    <artifact
+        location="D:\Project\Android\jangho\Synabro\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_2\classes.dex"
+        type="DEX" />
+    <artifact
+        location="D:\Project\Android\jangho\Synabro\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_0\classes.dex"
         type="DEX" />
 
-    <build timestamp="4541423080298" >
+    <build timestamp="11244505572784" >
         <artifact
-            location="D:\120111615\android\Android_Synabro\app\build\outputs\apk\app-debug.apk"
+            location="D:\Project\Android\jangho\Synabro\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
     </build>
-    <build timestamp="8580356550292" >
+    <build
+        timestamp="11942949170107"
+        verifier="R_CLASS_CHANGE" >
         <artifact
-            location="D:\120111615\android\Android_Synabro\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_3\classes.dex"
+            location="D:\Project\Android\jangho\Synabro\app\build\intermediates\res\resources-debug.ap_"
+            type="RESOURCES" />
+        <artifact
+            location="D:\Project\Android\jangho\Synabro\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_4\classes.dex"
             type="DEX" />
-    </build>
-    <build timestamp="8784250560964" >
         <artifact
-            location="D:\120111615\android\Android_Synabro\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_4\classes.dex"
+            location="D:\Project\Android\jangho\Synabro\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_2\classes.dex"
             type="DEX" />
-    </build>
-    <build timestamp="30891168750898" >
         <artifact
-            location="D:\120111615\android\Android_Synabro\app\build\outputs\apk\app-debug.apk"
-            type="MAIN" />
+            location="D:\Project\Android\jangho\Synabro\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_0\classes.dex"
+            type="DEX" />
     </build>
 
 </instant-run>

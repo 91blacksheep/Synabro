@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.user.first.Lib.CTextFileManager;
@@ -25,7 +26,7 @@ import com.example.user.first.UiSetting.CTextPosition;
 public class CHome extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener
 {
     /* var */
-    TextView btnStory, btnEmotion, btnSetting, btn4, btn5;
+    ImageView homeStory, homeEmotion, homeMemo, homeWorkshop, homeSetting;
     TextView myText;
 
     Toolbar toolbar;
@@ -46,15 +47,12 @@ public class CHome extends AppCompatActivity implements NavigationView.OnNavigat
         setContentView(R.layout.main_home_layout);
 
         /**/
-        btnStory = (TextView)findViewById(R.id.storybook);
-        btnEmotion = (TextView)findViewById(R.id.emotion);
-        btnSetting = (TextView)findViewById(R.id.setting);
-        btn4 = (TextView)findViewById(R.id.btn4);
-        btn5 = (TextView)findViewById(R.id.btn5);
+        homeStory = (ImageView)findViewById(R.id.home_story);
+        homeEmotion = (ImageView)findViewById(R.id.home_emotion);
+        homeMemo = (ImageView)findViewById(R.id.home_memo);
+        homeWorkshop = (ImageView)findViewById(R.id.home_workshop);
+        homeSetting = (ImageView)findViewById(R.id.home_setting);
         myText = (TextView)findViewById(R.id.mytext);
-
-        /* 메뉴 위치 세팅 */
-        cTextPosition = new CTextPosition(btnStory, btnEmotion, btnSetting, btn4, btn5, this);
 
         /* 네비게이션 드로어 초기화 */
         SetNav();
@@ -98,24 +96,24 @@ public class CHome extends AppCompatActivity implements NavigationView.OnNavigat
                 startActivity(intent1);
                 finish();
                 break;
-            case R.id.storybook:
+            case R.id.home_story:
                 Intent intent2 = new Intent(getApplicationContext(), CStoryListClient.class);
                 intent2.putExtra(CLoading.EXTRA_MESSAGE, message);
                 startActivity(intent2);
                 break;
-            case R.id.emotion:
+            case R.id.home_emotion:
                 Intent intent3 = new Intent(getApplicationContext(), CEmotion_List.class);
                 intent3.putExtra(CLoading.EXTRA_MESSAGE, message);
                 startActivity(intent3);
                 break;
-            case R.id.setting:
+            case R.id.home_memo:
                 Intent intent4 = new Intent(getApplicationContext(), CSetting_List.class);
                 intent4.putExtra(CLoading.EXTRA_MESSAGE, message);
                 startActivity(intent4);
                 break;
-            case R.id.btn4:
+            case R.id.home_workshop:
                 break;
-            case R.id.btn5:
+            case R.id.home_setting:
                 break;
         }
     }
@@ -145,26 +143,31 @@ public class CHome extends AppCompatActivity implements NavigationView.OnNavigat
         {
             Intent intent = new Intent(getApplicationContext(), CHome.class);
             startActivity(intent);
+            finish();
         }
         else if (id == R.id.nav_storybook)
         {
             Intent intent = new Intent(getApplicationContext(), CStoryListClient.class);
             startActivity(intent);
+            finish();
         }
         else if (id == R.id.nav_emotion_list)
         {
             Intent intent = new Intent(getApplicationContext(), CEmotion_List.class);
             startActivity(intent);
+            finish();
         }
         else if (id == R.id.nav_setting)
         {
             Intent intent = new Intent(getApplicationContext(), CSetting_List.class);
             startActivity(intent);
+            finish();
         }
         else if (id == R.id.nav_btn4)
         {
             Intent intent = new Intent(getApplicationContext(), CStory_Player.class);
             startActivity(intent);
+            finish();
         }
         else if (id == R.id.nav_btn5)
         {
