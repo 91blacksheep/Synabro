@@ -1,31 +1,31 @@
 [
     {
-        "merged": "D:\\Project\\Android\\jangho\\Synabro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\side_nav_bar.xml",
-        "source": "D:\\Project\\Android\\jangho\\Synabro\\app\\src\\main\\res\\drawable\\side_nav_bar.xml"
-    },
-    {
         "merged": "D:\\Project\\Android\\jangho\\Synabro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\tri_roll6.png",
         "source": "D:\\Project\\Android\\jangho\\Synabro\\app\\src\\main\\res\\drawable\\tri_roll6.png"
     },
     {
-        "merged": "D:\\Project\\Android\\jangho\\Synabro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_full_material.xml",
-        "source": "D:\\Project\\Android\\jangho\\Synabro\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_ratingbar_full_material.xml"
-    },
-    {
-        "merged": "D:\\Project\\Android\\jangho\\Synabro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\setting.png",
-        "source": "D:\\Project\\Android\\jangho\\Synabro\\app\\src\\main\\res\\drawable\\setting.png"
+        "merged": "D:\\Project\\Android\\jangho\\Synabro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\side_nav_bar.xml",
+        "source": "D:\\Project\\Android\\jangho\\Synabro\\app\\src\\main\\res\\drawable\\side_nav_bar.xml"
     },
     {
         "merged": "D:\\Project\\Android\\jangho\\Synabro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\darknight3.PNG",
         "source": "D:\\Project\\Android\\jangho\\Synabro\\app\\src\\main\\res\\drawable\\darknight3.PNG"
     },
     {
-        "merged": "D:\\Project\\Android\\jangho\\Synabro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\princess1.PNG",
-        "source": "D:\\Project\\Android\\jangho\\Synabro\\app\\src\\main\\res\\drawable\\princess1.PNG"
+        "merged": "D:\\Project\\Android\\jangho\\Synabro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\setting.png",
+        "source": "D:\\Project\\Android\\jangho\\Synabro\\app\\src\\main\\res\\drawable\\setting.png"
+    },
+    {
+        "merged": "D:\\Project\\Android\\jangho\\Synabro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_full_material.xml",
+        "source": "D:\\Project\\Android\\jangho\\Synabro\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_ratingbar_full_material.xml"
     },
     {
         "merged": "D:\\Project\\Android\\jangho\\Synabro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\thrashing4.PNG",
         "source": "D:\\Project\\Android\\jangho\\Synabro\\app\\src\\main\\res\\drawable\\thrashing4.PNG"
+    },
+    {
+        "merged": "D:\\Project\\Android\\jangho\\Synabro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\princess1.PNG",
+        "source": "D:\\Project\\Android\\jangho\\Synabro\\app\\src\\main\\res\\drawable\\princess1.PNG"
     },
     {
         "merged": "D:\\Project\\Android\\jangho\\Synabro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\home_setting.png",
@@ -92,12 +92,12 @@
         "source": "D:\\Project\\Android\\jangho\\Synabro\\app\\src\\main\\res\\drawable\\emotion_industry.png"
     },
     {
-        "merged": "D:\\Project\\Android\\jangho\\Synabro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\dding7.PNG",
-        "source": "D:\\Project\\Android\\jangho\\Synabro\\app\\src\\main\\res\\drawable\\dding7.PNG"
-    },
-    {
         "merged": "D:\\Project\\Android\\jangho\\Synabro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\emotion_fear.png",
         "source": "D:\\Project\\Android\\jangho\\Synabro\\app\\src\\main\\res\\drawable\\emotion_fear.png"
+    },
+    {
+        "merged": "D:\\Project\\Android\\jangho\\Synabro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\dding7.PNG",
+        "source": "D:\\Project\\Android\\jangho\\Synabro\\app\\src\\main\\res\\drawable\\dding7.PNG"
     },
     {
         "merged": "D:\\Project\\Android\\jangho\\Synabro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\home_emotion.png",
@@ -204,12 +204,12 @@
         "source": "D:\\Project\\Android\\jangho\\Synabro\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\drawable\\design_fab_background.xml"
     },
     {
-        "merged": "D:\\Project\\Android\\jangho\\Synabro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\emotion_autonomy.png",
-        "source": "D:\\Project\\Android\\jangho\\Synabro\\app\\src\\main\\res\\drawable\\emotion_autonomy.png"
-    },
-    {
         "merged": "D:\\Project\\Android\\jangho\\Synabro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\pic.jpg",
         "source": "D:\\Project\\Android\\jangho\\Synabro\\app\\src\\main\\res\\drawable\\pic.jpg"
+    },
+    {
+        "merged": "D:\\Project\\Android\\jangho\\Synabro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\emotion_autonomy.png",
+        "source": "D:\\Project\\Android\\jangho\\Synabro\\app\\src\\main\\res\\drawable\\emotion_autonomy.png"
     },
     {
         "merged": "D:\\Project\\Android\\jangho\\Synabro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\emotion_complex.png",
@@ -292,12 +292,12 @@
         "source": "D:\\Project\\Android\\jangho\\Synabro\\app\\src\\main\\res\\drawable\\dding4.PNG"
     },
     {
-        "merged": "D:\\Project\\Android\\jangho\\Synabro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_indicator_material.xml",
-        "source": "D:\\Project\\Android\\jangho\\Synabro\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_ratingbar_indicator_material.xml"
-    },
-    {
         "merged": "D:\\Project\\Android\\jangho\\Synabro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\princess7.PNG",
         "source": "D:\\Project\\Android\\jangho\\Synabro\\app\\src\\main\\res\\drawable\\princess7.PNG"
+    },
+    {
+        "merged": "D:\\Project\\Android\\jangho\\Synabro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_indicator_material.xml",
+        "source": "D:\\Project\\Android\\jangho\\Synabro\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_ratingbar_indicator_material.xml"
     },
     {
         "merged": "D:\\Project\\Android\\jangho\\Synabro\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\emotion_lead.png",

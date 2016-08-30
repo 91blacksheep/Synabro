@@ -109,12 +109,9 @@ public class CWebInterface extends Thread
 
             if(true == cData.strID.equals(strID))
             {
-                Log.i("CWebInterface", "Find " + cData.strID);
                 return cData;
             }
         }
-
-        //Log.i("CWebInterface","Find NULL!!");
         return null;
     }
     public void Remove(String strID)
@@ -165,8 +162,6 @@ public class CWebInterface extends Thread
 
     public void run()
     {
-        Log.i("CWebInterface","Run");
-
         URL url = null;
         URLConnection connection = null;
         InputStream in = null;
@@ -196,7 +191,6 @@ public class CWebInterface extends Thread
                 {
                     if(m_Callback != null)
                     {
-                        Log.i("CWebInterface","Callback!!!");
                         m_Callback.OnRequestCallback();
                         m_Callback = null;
                     }
@@ -205,7 +199,6 @@ public class CWebInterface extends Thread
 
                 cData = m_ReqList.get(0);
 
-                Log.i("CWebInterface:Req",cData.strID);
                 url = new URL(cData.strURL);
 
                 connection = url.openConnection();
@@ -231,15 +224,11 @@ public class CWebInterface extends Thread
             }
             catch (MalformedURLException e)
             {
-                Log.i("CWebInterface:Req"+ cData.strID+" Error!!!",e.toString());
-
                 cData.eState = EState.error;
                 cData.strErr = e.toString();
             }
             catch (IOException e)
             {
-                Log.i("CWebInterface:Req"+ cData.strID+" Error!!!",e.toString());
-
                 cData.eState = EState.error;
                 cData.strErr = e.toString();
             }
@@ -248,7 +237,5 @@ public class CWebInterface extends Thread
             m_ResList.add(cData);
 
         }
-
-        Log.i("CWebInterface","End");
     }
 }
