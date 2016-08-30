@@ -48,52 +48,86 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp" />
 
-            <RelativeLayout
+            <LinearLayout
+                android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/flower"
-                android:gravity="center" >
+                android:background="@drawable/background">
 
-                <TextView
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="동화책"
-                    android:id="@+id/storybook"
-                    android:onClick="onClickButton"
-                    android:textSize="30dp" />
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="정서"
-                    android:id="@+id/emotion"
-                    android:onClick="onClickButton"
-                    android:textSize="30dp" />
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:id="@+id/home_story"
+                        android:src="@drawable/home_story"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:onClick="onClickButton" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="혐오"
-                    android:id="@+id/btn5"
-                    android:onClick="onClickButton"
-                    android:textSize="30dp" />
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:id="@+id/home_emotion"
+                        android:src="@drawable/home_emotion"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:onClick="onClickButton" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="설정"
-                    android:id="@+id/setting"
-                    android:onClick="onClickButton"
-                    android:textSize="30dp" />
+                </LinearLayout>
 
-                <TextView
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="공포"
-                    android:id="@+id/btn4"
-                    android:onClick="onClickButton"
-                    android:textSize="30dp" />
-            </RelativeLayout>
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal" >
+
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:id="@+id/home_memo"
+                        android:src="@drawable/home_memo"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:onClick="onClickButton" />
+
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:id="@+id/home_workshop"
+                        android:src="@drawable/home_workshop"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:onClick="onClickButton" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal" >
+
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:id="@+id/home_setting"
+                        android:src="@drawable/home_setting"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:onClick="onClickButton" />
+
+                </LinearLayout>
+            </LinearLayout>
+
         </LinearLayout>
 
     </android.support.v4.widget.DrawerLayout>

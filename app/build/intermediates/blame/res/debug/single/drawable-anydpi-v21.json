@@ -1,42 +1,22 @@
 [
     {
-        "merged": "D:\\Project\\Android\\Android_Synabro\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\storybook.xml",
-        "source": "D:\\Project\\Android\\Android_Synabro\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\storybook.xml"
+        "merged": "D:\\Project\\Android\\jangho\\Synabro\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\list.xml",
+        "source": "D:\\Project\\Android\\jangho\\Synabro\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\list.xml"
     },
     {
-        "merged": "D:\\120111615\\android\\Android_Synabro\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\list.xml",
-        "source": "D:\\120111615\\android\\Android_Synabro\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\list.xml"
+        "merged": "D:\\Project\\Android\\jangho\\Synabro\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\storybook.xml",
+        "source": "D:\\Project\\Android\\jangho\\Synabro\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\storybook.xml"
     },
     {
-        "merged": "D:\\Project\\Android\\Android_Synabro\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\list.xml",
-        "source": "D:\\Project\\Android\\Android_Synabro\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\list.xml"
+        "merged": "D:\\Project\\Android\\jangho\\Synabro\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\crying.xml",
+        "source": "D:\\Project\\Android\\jangho\\Synabro\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\crying.xml"
     },
     {
-        "merged": "D:\\Project\\Android\\Android_Synabro\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\smile.xml",
-        "source": "D:\\Project\\Android\\Android_Synabro\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\smile.xml"
+        "merged": "D:\\Project\\Android\\jangho\\Synabro\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\ic_settings_24dp.xml",
+        "source": "D:\\Project\\Android\\jangho\\Synabro\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_settings_24dp.xml"
     },
     {
-        "merged": "D:\\Project\\Android\\Android_Synabro\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\ic_settings_24dp.xml",
-        "source": "D:\\Project\\Android\\Android_Synabro\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_settings_24dp.xml"
-    },
-    {
-        "merged": "D:\\120111615\\android\\Android_Synabro\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\crying.xml",
-        "source": "D:\\120111615\\android\\Android_Synabro\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\crying.xml"
-    },
-    {
-        "merged": "D:\\120111615\\android\\Android_Synabro\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\storybook.xml",
-        "source": "D:\\120111615\\android\\Android_Synabro\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\storybook.xml"
-    },
-    {
-        "merged": "D:\\Project\\Android\\Android_Synabro\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\crying.xml",
-        "source": "D:\\Project\\Android\\Android_Synabro\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\crying.xml"
-    },
-    {
-        "merged": "D:\\120111615\\android\\Android_Synabro\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\ic_settings_24dp.xml",
-        "source": "D:\\120111615\\android\\Android_Synabro\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_settings_24dp.xml"
-    },
-    {
-        "merged": "D:\\120111615\\android\\Android_Synabro\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\smile.xml",
-        "source": "D:\\120111615\\android\\Android_Synabro\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\smile.xml"
+        "merged": "D:\\Project\\Android\\jangho\\Synabro\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\smile.xml",
+        "source": "D:\\Project\\Android\\jangho\\Synabro\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\smile.xml"
     }
 ]

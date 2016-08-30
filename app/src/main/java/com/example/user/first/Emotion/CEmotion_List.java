@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.user.first.Home.CHome;
@@ -26,7 +27,7 @@ import com.example.user.first.UiSetting.CTextPosition;
 public class CEmotion_List extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener
 {
 
-    TextView BtnHappy, BtnSad, BtnPanic, BtnAnger, BtnDisGust;
+    ImageView achievement, anger, autonomy, complex, distrust, fear, happy, industry, lead, sad, senseOfGuilt, shame, trust;
 
     String message;
 
@@ -42,14 +43,13 @@ public class CEmotion_List extends AppCompatActivity implements NavigationView.O
         super.onCreate(savedInstanceState);
         setContentView(R.layout.emotion_list_layout);
 
-        BtnHappy = (TextView)findViewById(R.id.Happy);
-        BtnSad = (TextView)findViewById(R.id.Sad);
-        BtnPanic = (TextView)findViewById(R.id.Panic);
-        BtnAnger = (TextView)findViewById(R.id.Anger);
-        BtnDisGust = (TextView)findViewById(R.id.DisGust);
-
-        /**/
-        cTextPosition = new CTextPosition(BtnHappy, BtnSad, BtnPanic, BtnAnger, BtnDisGust, this);
+        achievement = (ImageView)findViewById(R.id.emotion_achievement);
+        anger = (ImageView)findViewById(R.id.emotion_anger);
+        autonomy = (ImageView)findViewById(R.id.emotion_autonomy);
+        complex = (ImageView)findViewById(R.id.emotion_complex);
+        distrust = (ImageView)findViewById(R.id.emotion_distrust);
+        fear = (ImageView)findViewById(R.id.emotion_fear);
+        happy = (ImageView)findViewById(R.id.emotion_happy);
 
         /* 네비게이션 드로어 초기화 */
         SetNav();
@@ -85,26 +85,7 @@ public class CEmotion_List extends AppCompatActivity implements NavigationView.O
     {
         switch(v.getId())
         {
-            case R.id.Happy:
-                Intent intent1 = new Intent(getApplicationContext(),CHappy.class);
-                startActivity(intent1);
-                break;
-            case R.id.Sad:
-                Intent intent2 = new Intent(getApplicationContext(), CSad.class);
-                startActivity(intent2);
-                break;
-            case R.id.Panic:
-                Intent intent3 = new Intent(getApplicationContext(),CPanic.class);
-                startActivity(intent3);
-                break;
-            case R.id.Anger:
-                Intent intent4 = new Intent(getApplicationContext(),CAnger.class);
-                startActivity(intent4);
-                break;
-            case R.id.DisGust:
-                Intent intent5 = new Intent(getApplicationContext(),CDisGust.class);
-                startActivity(intent5);
-                break;
+
         }
     }
 

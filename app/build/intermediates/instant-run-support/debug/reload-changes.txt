@@ -1,5 +1,0 @@
-CHANGED,D:\120111615\android\Android_Synabro\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\user\first\Story\Story\PlayerView\CStory_Player$2$override.class
-CHANGED,D:\120111615\android\Android_Synabro\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\user\first\Story\Story\PlayerView\CStory_Player$1$override.class
-CHANGED,D:\120111615\android\Android_Synabro\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\user\first\Story\Story\PlayerView\CStory_Player$CTalkGuideLine$override.class
-CHANGED,D:\120111615\android\Android_Synabro\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\android\tools\fd\runtime\AppPatchesLoaderImpl.class
-CHANGED,D:\120111615\android\Android_Synabro\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\user\first\Story\Story\PlayerView\CStory_Player$override.class

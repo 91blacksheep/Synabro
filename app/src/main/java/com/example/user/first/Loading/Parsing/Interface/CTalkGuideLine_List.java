@@ -1,9 +1,11 @@
 package com.example.user.first.Loading.Parsing.Interface;
 
+import android.graphics.drawable.Drawable;
 import android.support.v4.view.PagerAdapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.user.first.Loading.Parsing.Lib.CTalkGuideLine_Data;
@@ -42,10 +44,10 @@ public class CTalkGuideLine_List extends PagerAdapter
 
         view = inflater.inflate(R.layout.story_viewpager, null);
 
-        TextView tv_viewPager= (TextView) view.findViewById(R.id.tv_vp);
+        ImageView tv_viewPager= (ImageView) view.findViewById(R.id.talkGuideLine);
 
         CTalkGuideLine_Data listViewPagerItem = talkGuideLineList.get(position);
-        tv_viewPager.setText(listViewPagerItem.Get_talkGuideLine());
+        tv_viewPager.setImageDrawable(listViewPagerItem.GetTalkGuideLine());//setText(listViewPagerItem.Get_talkGuideLine());
 
         container.addView(view);
 
@@ -64,11 +66,11 @@ public class CTalkGuideLine_List extends PagerAdapter
         return v == obj;
     }
 
-    public void addItem(String text)
+    public void addItem(Drawable img)
     {
         CTalkGuideLine_Data item = new CTalkGuideLine_Data();
 
-        item.Set_talkGuideLine(text);
+        item.SetTalkGuideLine(img);
 
         talkGuideLineList.add(item);
     }

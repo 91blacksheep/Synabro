@@ -46,52 +46,201 @@
                 android:textSize="30dp"
                 android:layout_marginTop="20dp" />
 
-            <RelativeLayout
+            <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/flower"
-                android:gravity="center">
+                android:id="@+id/scrollView"
+                android:layout_gravity="center_horizontal">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="기쁨"
-                    android:id="@+id/Happy"
-                    android:onClick="onClickButton"
-                    android:textSize="30dp" />
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/background">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="혐오"
-                    android:id="@+id/DisGust"
-                    android:onClick="onClickButton"
-                    android:textSize="30dp" />
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center_horizontal" >
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="슬픔"
-                    android:id="@+id/Sad"
-                    android:onClick="onClickButton"
-                    android:textSize="30dp" />
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:id="@+id/emotion_achievement"
+                            android:src="@drawable/emotion_achievement"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:onClick="onClickButton" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="공포"
-                    android:id="@+id/Panic"
-                    android:onClick="onClickButton"
-                    android:textSize="30dp" />
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:id="@+id/emotion_anger"
+                            android:src="@drawable/emotion_anger"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:onClick="onClickButton" />
+                    </LinearLayout>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="분노"
-                    android:id="@+id/Anger"
-                    android:onClick="onClickButton"
-                    android:textSize="30dp" />
-            </RelativeLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center_horizontal" >
+
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:id="@+id/emotion_autonomy"
+                            android:src="@drawable/emotion_autonomy"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:onClick="onClickButton" />
+
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:id="@+id/emotion_complex"
+                            android:src="@drawable/emotion_complex"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:onClick="onClickButton" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center_horizontal" >
+
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:id="@+id/emotion_distrust"
+                            android:src="@drawable/emotion_distrust"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:onClick="onClickButton" />
+
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:id="@+id/emotion_fear"
+                            android:src="@drawable/emotion_fear"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:onClick="onClickButton" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center_horizontal" >
+
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:id="@+id/emotion_happy"
+                            android:src="@drawable/emotion_happy"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:onClick="onClickButton" />
+
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:id="@+id/emotion_industry"
+                            android:src="@drawable/emotion_industry"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:onClick="onClickButton" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center_horizontal" >
+
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:id="@+id/emotion_lead"
+                            android:src="@drawable/emotion_lead"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:onClick="onClickButton" />
+
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:id="@+id/emotion_sad"
+                            android:src="@drawable/emotion_sad"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:onClick="onClickButton" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center_horizontal" >
+
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:id="@+id/emotion_sense_of_guilt"
+                            android:src="@drawable/emotion_sense_of_guilt"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:onClick="onClickButton" />
+
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:id="@+id/emotion_shame"
+                            android:src="@drawable/emotion_shame"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:onClick="onClickButton" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center_horizontal" >
+
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:id="@+id/emotion_trust"
+                            android:src="@drawable/emotion_trust"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:onClick="onClickButton" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </ScrollView>
 
         </LinearLayout>
 
