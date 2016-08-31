@@ -15,7 +15,8 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:orientation="vertical"
-            android:gravity="center">
+            android:gravity="center"
+            android:background="@drawable/background">
 
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar"
@@ -48,7 +49,7 @@
 
             <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:id="@+id/scrollView"
                 android:layout_gravity="center_horizontal">
 
@@ -56,15 +57,14 @@
                     android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_gravity="center_horizontal"
-                    android:background="@drawable/background">
+                    android:layout_gravity="center_horizontal">
 
                     <LinearLayout
                         android:orientation="horizontal"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
-                        android:gravity="center_horizontal" >
+                        android:gravity="center_horizontal">
 
                         <ImageView
                             android:layout_width="150dp"
