@@ -43,7 +43,6 @@ public class CStory_Player extends YouTubeBaseActivity implements YouTubePlayer.
         /**/
         pager = (ViewPager) findViewById(R.id.pager);
         m_TalkGuideLine = new CTalkGuideLine();
-
     }
 
     public void onClickButton(View v)
@@ -186,7 +185,6 @@ public class CStory_Player extends YouTubeBaseActivity implements YouTubePlayer.
                     list.addItem(getDrawable(R.drawable.thrashing7));
                     break;
             }
-
             pager.setAdapter(list);
         }
     }
@@ -207,8 +205,8 @@ public class CStory_Player extends YouTubeBaseActivity implements YouTubePlayer.
         /** Start buffering **/
         if (!wasRestored)
         {
-            player.cueVideo(url);
-            //player.cueVideo("i1jSCpo1Vq0");
+            //player.cueVideo(url);
+            player.cueVideo("Z1pgXANlTpA");
         }
     }
 

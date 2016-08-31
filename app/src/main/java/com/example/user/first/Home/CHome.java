@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.user.first.Lib.BlacksheepLib.CWebInterface;
 import com.example.user.first.Lib.CTextFileManager;
 import com.example.user.first.Loading.Client.CLoading;
 import com.example.user.first.UiSetting.CMyText;
@@ -182,5 +183,12 @@ public class CHome extends AppCompatActivity implements NavigationView.OnNavigat
         drawer.closeDrawer(GravityCompat.START);
 
         return true;
+    }
+
+    @Override
+    protected void onDestroy()
+    {
+        CWebInterface.GetInstance().Exit();
+        super.onDestroy();
     }
 }

@@ -42,7 +42,7 @@ public class CStoryList extends BaseAdapter
         list.add(new CStoryData("LEnsRQLB4DU", "까만구름, 하얀구름아", "▶ 우울한 마음", url+"i1jSCpo1Vq0", "내적", "우울"));
         list.add(new CStoryData("LEnsRQLB4DU", "나도 공주!", "▶ 질투", url+"i1jSCpo1Vq0", "내적", "질투"));
         list.add(new CStoryData("LEnsRQLB4DU", "또륵, 또르륵 사탕", "▶ 눈물은 언제 나는 걸까?", url+"i1jSCpo1Vq0", "내적", "눈물"));
-        list.add(new CStoryData("LEnsRQLB4DU", "세모야! 굴러봐!", "▶ 미운마음, 미운 친구", url+"i1jSCpo1Vq0", "내적", "미워하는마음"));
+        list.add(new CStoryData("LEnsRQLB4DU", "세모야! 굴러봐!", "▶ 미운마음, 미운 친구", url+"i1jSCpo1Vq0", "내적", "미움"));
         list.add(new CStoryData("LEnsRQLB4DU", "어두운 밤", "▶ 두려움", url+"i1jSCpo1Vq0", "내적", "두려움"));
         list.add(new CStoryData("LEnsRQLB4DU", "콩닥, 철썩 파도", "▶ 심장은 왜 뛰는 걸까?", url+"i1jSCpo1Vq0", "내적", "정서의형성"));
         list.add(new CStoryData("LEnsRQLB4DU", "내 등에 풍선이?! 어떻게 해요?", "▶ 폭력", url+"i1jSCpo1Vq0", "외적", "폭력"));
@@ -71,7 +71,7 @@ public class CStoryList extends BaseAdapter
         list.add(new CStoryData("LEnsRQLB4DU", "까만구름, 하얀구름아", "▶ 우울한 마음", url+"i1jSCpo1Vq0", "내적", "우울"));
         list.add(new CStoryData("LEnsRQLB4DU", "나도 공주!", "▶ 질투", url+"i1jSCpo1Vq0", "내적", "질투"));
         list.add(new CStoryData("LEnsRQLB4DU", "또륵, 또르륵 사탕", "▶ 눈물은 언제 나는 걸까?", url+"i1jSCpo1Vq0", "내적", "눈물"));
-        list.add(new CStoryData("LEnsRQLB4DU", "세모야! 굴러봐!", "▶ 미운마음, 미운 친구", url+"i1jSCpo1Vq0", "내적", "미워하는마음"));
+        list.add(new CStoryData("LEnsRQLB4DU", "세모야! 굴러봐!", "▶ 미운마음, 미운 친구", url+"i1jSCpo1Vq0", "내적", "미움"));
         list.add(new CStoryData("LEnsRQLB4DU", "어두운 밤", "▶ 두려움", url+"i1jSCpo1Vq0", "내적", "두려움"));
         list.add(new CStoryData("LEnsRQLB4DU", "콩닥, 철썩 파도", "▶ 심장은 왜 뛰는 걸까?", url+"i1jSCpo1Vq0", "내적", "정서의형성"));
         list.add(new CStoryData("LEnsRQLB4DU", "내 등에 풍선이?! 어떻게 해요?", "▶ 폭력", url+"i1jSCpo1Vq0", "외적", "폭력"));
@@ -116,7 +116,7 @@ public class CStoryList extends BaseAdapter
         list.add(new CStoryData("LEnsRQLB4DU", "까만구름, 하얀구름", "▶ 우울한 마음", url+"i1jSCpo1Vq0", "내적", "우울"));
         list.add(new CStoryData("LEnsRQLB4DU", "나도 공주!", "▶ 질투", url+"i1jSCpo1Vq0", "내적", "질투"));
         list.add(new CStoryData("LEnsRQLB4DU", "또륵, 또르륵 사탕", "▶ 눈물은 언제 나는 걸까?", url+"i1jSCpo1Vq0", "내적", "눈물"));
-        list.add(new CStoryData("LEnsRQLB4DU", "세모야! 굴러봐!", "▶ 미운마음, 미운 친구", url+"i1jSCpo1Vq0", "내적", "미워하는마음"));
+        list.add(new CStoryData("LEnsRQLB4DU", "세모야! 굴러봐!", "▶ 미운마음, 미운 친구", url+"i1jSCpo1Vq0", "내적", "미움"));
         list.add(new CStoryData("LEnsRQLB4DU", "어두운 밤", "▶ 두려움", url+"i1jSCpo1Vq0", "내적", "두려움"));
         list.add(new CStoryData("LEnsRQLB4DU", "콩닥, 철썩 파도", "▶ 심장은 왜 뛰는 걸까?", url+"i1jSCpo1Vq0", "내적", "정서의형성"));
     }
