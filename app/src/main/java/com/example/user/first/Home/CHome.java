@@ -185,10 +185,24 @@ public class CHome extends AppCompatActivity implements NavigationView.OnNavigat
         return true;
     }
 
+    /*@Override
+    protected void onStart()
+    {
+        CWebInterface.GetInstance().Enter();
+        super.onStart();
+    }
+
+    @Override
+    protected void onStop()
+    {
+        CWebInterface.GetInstance().Exit();
+        super.onStop();
+    }
+
     @Override
     protected void onDestroy()
     {
         CWebInterface.GetInstance().Exit();
         super.onDestroy();
-    }
+    }*/
 }

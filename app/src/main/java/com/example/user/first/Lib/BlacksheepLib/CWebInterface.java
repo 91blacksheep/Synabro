@@ -169,8 +169,8 @@ public class CWebInterface extends Thread
         int nCount = 0;
         CData cData = null;
 
-        while(m_bActive == true)
-        {
+        while(m_bActive == true) {
+            Log.i("Run","test");
             /*
             try
             {
@@ -184,13 +184,10 @@ public class CWebInterface extends Thread
             */
 
             /**/
-            try
-            {
+            try {
                 nCount = m_ReqList.size();
-                if(nCount <= 0)
-                {
-                    if(m_Callback != null)
-                    {
+                if (nCount <= 0) {
+                    if (m_Callback != null) {
                         m_Callback.OnRequestCallback();
                         m_Callback = null;
                     }
@@ -210,8 +207,7 @@ public class CWebInterface extends Thread
 
                 byte[] readByte = new byte[1024];
                 int readLen;
-                while ((readLen = in.read(readByte)) != -1)
-                {
+                while ((readLen = in.read(readByte)) != -1) {
                     outputStream.write(readByte, 0, readLen);
                 }
 
@@ -221,14 +217,10 @@ public class CWebInterface extends Thread
 
                 in.close();
                 url = null;
-            }
-            catch (MalformedURLException e)
-            {
+            } catch (MalformedURLException e) {
                 cData.eState = EState.error;
                 cData.strErr = e.toString();
-            }
-            catch (IOException e)
-            {
+            } catch (IOException e) {
                 cData.eState = EState.error;
                 cData.strErr = e.toString();
             }

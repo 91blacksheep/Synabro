@@ -16,7 +16,7 @@
             android:layout_height="fill_parent"
             android:orientation="vertical"
             android:gravity="center"
-            android:background="@drawable/background">
+            android:background="@drawable/background1">
 
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar"
@@ -38,14 +38,6 @@
                     android:textColor="#ffffff" />
 
             </android.support.v7.widget.Toolbar>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView4"
-                android:layout_gravity="center_horizontal"
-                android:textSize="30dp"
-                android:layout_marginTop="20dp" />
 
             <ScrollView
                 android:layout_width="match_parent"
@@ -70,7 +62,7 @@
                             android:layout_width="150dp"
                             android:layout_height="150dp"
                             android:id="@+id/emotion_achievement"
-                            android:src="@drawable/emotion_achievement"
+                            android:src="@drawable/emotion_happy"
                             android:layout_marginLeft="10dp"
                             android:layout_marginRight="10dp"
                             android:onClick="onClickButton" />
@@ -79,7 +71,7 @@
                             android:layout_width="150dp"
                             android:layout_height="150dp"
                             android:id="@+id/emotion_anger"
-                            android:src="@drawable/emotion_anger"
+                            android:src="@drawable/emotion_sad"
                             android:layout_gravity="center_vertical"
                             android:layout_marginRight="10dp"
                             android:layout_marginLeft="10dp"
@@ -97,7 +89,7 @@
                             android:layout_width="150dp"
                             android:layout_height="150dp"
                             android:id="@+id/emotion_autonomy"
-                            android:src="@drawable/emotion_autonomy"
+                            android:src="@drawable/emotion_achievement"
                             android:layout_marginLeft="10dp"
                             android:layout_marginRight="10dp"
                             android:onClick="onClickButton" />
@@ -106,7 +98,7 @@
                             android:layout_width="150dp"
                             android:layout_height="150dp"
                             android:id="@+id/emotion_complex"
-                            android:src="@drawable/emotion_complex"
+                            android:src="@drawable/emotion_anger"
                             android:layout_gravity="center_vertical"
                             android:layout_marginRight="10dp"
                             android:layout_marginLeft="10dp"
@@ -124,7 +116,7 @@
                             android:layout_width="150dp"
                             android:layout_height="150dp"
                             android:id="@+id/emotion_distrust"
-                            android:src="@drawable/emotion_distrust"
+                            android:src="@drawable/emotion_trust"
                             android:layout_marginLeft="10dp"
                             android:layout_marginRight="10dp"
                             android:onClick="onClickButton" />
@@ -133,7 +125,7 @@
                             android:layout_width="150dp"
                             android:layout_height="150dp"
                             android:id="@+id/emotion_fear"
-                            android:src="@drawable/emotion_fear"
+                            android:src="@drawable/emotion_distrust"
                             android:layout_gravity="center_vertical"
                             android:layout_marginRight="10dp"
                             android:layout_marginLeft="10dp"
@@ -151,7 +143,7 @@
                             android:layout_width="150dp"
                             android:layout_height="150dp"
                             android:id="@+id/emotion_happy"
-                            android:src="@drawable/emotion_happy"
+                            android:src="@drawable/emotion_autonomy"
                             android:layout_marginLeft="10dp"
                             android:layout_marginRight="10dp"
                             android:onClick="onClickButton" />
@@ -160,7 +152,7 @@
                             android:layout_width="150dp"
                             android:layout_height="150dp"
                             android:id="@+id/emotion_industry"
-                            android:src="@drawable/emotion_industry"
+                            android:src="@drawable/emotion_shame"
                             android:layout_gravity="center_vertical"
                             android:layout_marginRight="10dp"
                             android:layout_marginLeft="10dp"
@@ -187,7 +179,7 @@
                             android:layout_width="150dp"
                             android:layout_height="150dp"
                             android:id="@+id/emotion_sad"
-                            android:src="@drawable/emotion_sad"
+                            android:src="@drawable/emotion_sense_of_guilt"
                             android:layout_gravity="center_vertical"
                             android:layout_marginRight="10dp"
                             android:layout_marginLeft="10dp"
@@ -205,7 +197,7 @@
                             android:layout_width="150dp"
                             android:layout_height="150dp"
                             android:id="@+id/emotion_sense_of_guilt"
-                            android:src="@drawable/emotion_sense_of_guilt"
+                            android:src="@drawable/emotion_industry"
                             android:layout_marginLeft="10dp"
                             android:layout_marginRight="10dp"
                             android:onClick="onClickButton" />
@@ -214,7 +206,7 @@
                             android:layout_width="150dp"
                             android:layout_height="150dp"
                             android:id="@+id/emotion_shame"
-                            android:src="@drawable/emotion_shame"
+                            android:src="@drawable/emotion_complex"
                             android:layout_gravity="center_vertical"
                             android:layout_marginRight="10dp"
                             android:layout_marginLeft="10dp"
@@ -232,7 +224,7 @@
                             android:layout_width="150dp"
                             android:layout_height="150dp"
                             android:id="@+id/emotion_trust"
-                            android:src="@drawable/emotion_trust"
+                            android:src="@drawable/emotion_fear"
                             android:layout_marginLeft="10dp"
                             android:layout_marginRight="10dp"
                             android:onClick="onClickButton" />

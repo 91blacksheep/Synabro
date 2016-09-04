@@ -97,13 +97,13 @@ public class CStory_Player extends YouTubeBaseActivity implements YouTubePlayer.
                 case "미움":
                     list = new CTalkGuideLine_List(getLayoutInflater());
 
-                    list.addItem(getDrawable(R.drawable.tri_roll1));
-                    list.addItem(getDrawable(R.drawable.tri_roll2));
-                    list.addItem(getDrawable(R.drawable.tri_roll3));
-                    list.addItem(getDrawable(R.drawable.tri_roll4));
-                    list.addItem(getDrawable(R.drawable.tri_roll5));
-                    list.addItem(getDrawable(R.drawable.tri_roll6));
-                    list.addItem(getDrawable(R.drawable.tri_roll7));
+                    list.addItem(getDrawable(R.drawable.t1));
+                    list.addItem(getDrawable(R.drawable.t2));
+                    list.addItem(getDrawable(R.drawable.t3));
+                    list.addItem(getDrawable(R.drawable.t4));
+                    list.addItem(getDrawable(R.drawable.t5));
+                    list.addItem(getDrawable(R.drawable.t6));
+                    list.addItem(getDrawable(R.drawable.t7));
                     break;
                 case "두려움":
                     list = new CTalkGuideLine_List(getLayoutInflater());
