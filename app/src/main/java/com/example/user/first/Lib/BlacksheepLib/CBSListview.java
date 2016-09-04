@@ -16,6 +16,7 @@ public class CBSListview
     /*
      * *
      */
+
     public CBSListview(ListView listView)
     {
         m_cAdapter = new CBSListviewAdapter();

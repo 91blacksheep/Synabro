@@ -1,4 +1,4 @@
-package com.example.user.first.Story.StoryList.View;
+package com.example.user.first.Story;
 
 import android.content.Context;
 import android.content.Intent;
@@ -12,6 +12,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -29,10 +30,9 @@ import com.example.user.first.Loading.Parsing.Interface.CStoryList;
 import com.example.user.first.Lib.BlacksheepLib.CBSListview;
 import com.example.user.first.Lib.BlacksheepLib.CBSListviewAdapter;
 import com.example.user.first.Lib.BlacksheepLib.CBSListviewData;
-import com.example.user.first.Loading.Parsing.Lib.CStoryData;
 import com.example.user.first.R;
 import com.example.user.first.Setting.CSetting_List;
-import com.example.user.first.Story.Story.PlayerView.CStory_Player;
+import com.example.user.first.PlayerView.CStory_Player;
 import com.example.user.first.UiSetting.CMyText;
 
 /**
@@ -43,7 +43,6 @@ public class CStoryListClient extends AppCompatActivity implements NavigationVie
 
     class CItem extends CBSListviewData
     {
-        public String m_thumbnail = null;
         public String m_title = null;
         public String m_ex = null;
         public String m_url = null;
@@ -53,7 +52,7 @@ public class CStoryListClient extends AppCompatActivity implements NavigationVie
     }
 
     /* value */
-    //final String url = "https://www.youtube.com/watch?v=";
+    final String url = "https://www.youtube.com/watch?v=";
 
 
     CBSListview cBSListview;
@@ -66,7 +65,7 @@ public class CStoryListClient extends AppCompatActivity implements NavigationVie
     String message;
 
     //public ListView listView;
-    public CStoryList cStoryList = null;
+    //public CStoryList cStoryList = null;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState)
@@ -75,7 +74,7 @@ public class CStoryListClient extends AppCompatActivity implements NavigationVie
         setContentView(R.layout.story_list_layout);
 
         /**/
-        cStoryList = new CStoryList(this);
+        //cStoryList = new CStoryList(this);
 
         scrollView = (ScrollView)findViewById(R.id.scrView);
 
@@ -83,18 +82,22 @@ public class CStoryListClient extends AppCompatActivity implements NavigationVie
         ListView listView = (ListView)findViewById(R.id.listView);
         cBSListview = new CBSListview(listView);
 
-        CItem cItem = new CItem();
-        cItem.m_thumbnail = "LEnsRQLB4DU";
-        cItem.m_title = "세모야 굴러봐";
-        cItem.m_ex = "▶ 우울한 마음";
-        cItem.m_url = "Z1pgXANlTpA";
-        cItem.m_group = "내적";
-        cItem.m_type = "미움";
+        CStoryDataList.CData cData;
+        int i = CStoryDataList.GetInstance().Size();
+        while(--i >= 0)
+        {
+            cData = CStoryDataList.GetInstance().Get(i);
 
-        CWebInterface.CData cData =  CWebInterface.GetInstance().Find("Img1");
-        cItem.bmpIcon = BitmapFactory.decodeByteArray(cData.byteData, 0, cData.byteData.length);
+            CItem cItem = new CItem();
+            cItem.m_title = cData.strTitle;
+            cItem.m_ex = cData.strEx;
+            cItem.m_url = cData.strUrl;
+            cItem.m_group = cData.strGroup;
+            cItem.m_type = cData.strType;
+            cItem.bmpIcon = cData.bmpIcon;
 
-        cBSListview.AddItem(cItem);
+            cBSListview.AddItem(cItem);
+        }
 
         cBSListview.OnDraw(OnDraw);
 
@@ -198,6 +201,8 @@ public class CStoryListClient extends AppCompatActivity implements NavigationVie
         public void onItemClick(AdapterView<?> parent, View view, int position, long l_position)
         {
             CItem item = (CItem)parent.getItemAtPosition(position);
+
+            Log.i("Play:",item.m_url);
 
             String url = item.m_url;
             String type = item.m_type;
