@@ -2,7 +2,6 @@ package com.example.user.first.Loading.Client;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.TextView;
@@ -11,13 +10,6 @@ import com.example.user.first.Home.CHome;
 import com.example.user.first.Lib.CTextFileManager;
 import com.example.user.first.Lib.BlacksheepLib.CWebInterface;
 import com.example.user.first.R;
-import com.example.user.first.Story.CStoryDataList;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.UnsupportedEncodingException;
 
 /**
  * Created by Administrator on 2016-07-22.
@@ -91,10 +83,7 @@ public class CLoading extends AppCompatActivity
 
             CWebInterface.GetInstance().ResClear();
             CWebInterface.GetInstance().Exit();
-
-
         }
-
         super.onDestroy();
     }
 }

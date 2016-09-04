@@ -1,0 +1,2 @@
+CHANGED,D:\120111615\android\Synabro\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\user\first\Lib\BlacksheepLib\CWebInterface$override.class
+CHANGED,D:\120111615\android\Synabro\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\android\tools\fd\runtime\AppPatchesLoaderImpl.class
