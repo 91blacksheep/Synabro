@@ -58,6 +58,12 @@ public class CWebInterface extends Thread
     * *
     */
 
+
+    public static void DestroyInstance()
+    {
+        instance = null;
+    }
+
     public static CWebInterface GetInstance()
     {
         if(instance != null)
@@ -112,6 +118,7 @@ public class CWebInterface extends Thread
                 return cData;
             }
         }
+
         return null;
     }
     public void Remove(String strID)
@@ -130,6 +137,11 @@ public class CWebInterface extends Thread
         }
     }
 
+    public void ResClear()
+    {
+        m_ResList.clear();
+    }
+
     ////////////////////////////////////////////////////////////////////////////////////////////////////////
     //
     public void Enter()
@@ -142,22 +154,31 @@ public class CWebInterface extends Thread
     public void Exit()
     {
         m_bActive = false;
+        Log.i("CWebInterface","End?");
+        this.interrupt();
+
+        int i = 0;
+        /**/
+        if(m_ResList != null)
+        {
+            i = m_ResList.size();
+            while (--i >= 0)
+            {
+                m_ResList.remove(i);
+            }
+            //m_ResList = null;
+        }
 
         /**/
-        int i = m_ReqList.size();
-        while(--i >= 0)
+        if(m_ReqList != null)
         {
-            m_ReqList.remove(i);
+            i = m_ReqList.size();
+            while (--i >= 0)
+            {
+                m_ReqList.remove(i);
+            }
+            //m_ReqList = null;
         }
-        m_ReqList = null;
-
-        /**/
-        i = m_ReqList.size();
-        while(--i >= 0)
-        {
-            m_ReqList.remove(i);
-        }
-        m_ReqList = null;
     }
 
     public void run()
@@ -180,12 +201,13 @@ public class CWebInterface extends Thread
             {
                 e.printStackTrace();
                 return;
-            }
-            */
+            }*/
 
             /**/
             try
             {
+                Log.i("CWebInterface","run");
+
                 nCount = m_ReqList.size();
                 if(nCount <= 0)
                 {
@@ -204,7 +226,7 @@ public class CWebInterface extends Thread
                 connection = url.openConnection();
                 in = connection.getInputStream();
 
-                int contentLength = connection.getContentLength();
+                //int contentLength = connection.getContentLength();
 
                 ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
 
@@ -235,7 +257,8 @@ public class CWebInterface extends Thread
 
             m_ReqList.remove(0);
             m_ResList.add(cData);
-
         }
+
+        Log.i("CWebInterface","End");
     }
 }

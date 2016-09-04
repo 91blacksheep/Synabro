@@ -13,8 +13,8 @@ import android.view.MenuItem;
 import com.example.user.first.Home.CHome;
 import com.example.user.first.R;
 import com.example.user.first.Setting.CSetting_List;
-import com.example.user.first.Story.Story.PlayerView.CStory_Player;
-import com.example.user.first.Story.StoryList.View.CStoryListClient;
+import com.example.user.first.PlayerView.CStory_Player;
+import com.example.user.first.Story.CStoryListClient;
 
 /**
  * Created by USER on 2016-06-26.

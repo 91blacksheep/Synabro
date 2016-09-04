@@ -15,8 +15,8 @@ import android.widget.TextView;
 import com.example.user.first.Emotion.CEmotion_List;
 import com.example.user.first.Home.CHome;
 import com.example.user.first.R;
-import com.example.user.first.Story.Story.PlayerView.CStory_Player;
-import com.example.user.first.Story.StoryList.View.CStoryListClient;
+import com.example.user.first.PlayerView.CStory_Player;
+import com.example.user.first.Story.CStoryListClient;
 import com.example.user.first.UiSetting.CMyText;
 import com.example.user.first.UiSetting.CTextPosition;
 

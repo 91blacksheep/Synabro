@@ -8,19 +8,21 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.user.first.Lib.BlacksheepLib.CWebInterface;
 import com.example.user.first.Lib.CTextFileManager;
 import com.example.user.first.Loading.Client.CLoading;
 import com.example.user.first.UiSetting.CMyText;
 import com.example.user.first.Emotion.CEmotion_List;
 import com.example.user.first.R;
 import com.example.user.first.Setting.CSetting_List;
-import com.example.user.first.Story.Story.PlayerView.CStory_Player;
-import com.example.user.first.Story.StoryList.View.CStoryListClient;
+import com.example.user.first.PlayerView.CStory_Player;
+import com.example.user.first.Story.CStoryListClient;
 import com.example.user.first.UiSetting.CTextPosition;
 
 public class CHome extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener

@@ -2,28 +2,41 @@ package com.example.user.first.Loading.Client;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.widget.TextView;
 
 import com.example.user.first.Home.CHome;
 import com.example.user.first.Lib.CTextFileManager;
 import com.example.user.first.Lib.BlacksheepLib.CWebInterface;
 import com.example.user.first.R;
+import com.example.user.first.Story.CStoryDataList;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.UnsupportedEncodingException;
 
 /**
  * Created by Administrator on 2016-07-22.
  */
 public class CLoading extends AppCompatActivity
 {
-    final String img_url1 = "https://i.ytimg.com/vi/";
-    final String img_url2 = "/hqdefault.jpg?custom=true&w=196&h=110&stc=true&jpg444=true&jpgq=90&sp=68&sigh=";
 
+    CLoader m_cLoader = null;
     TextView TView;
     String str;
 
     public final static String EXTRA_MESSAGE = "unikys.todo.MESSAGE";
 
     CTextFileManager cTextFileManager = null;
+
+
+    /*
+    * *
+    */
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -36,19 +49,26 @@ public class CLoading extends AppCompatActivity
 
         TView = (TextView)findViewById(R.id.loading);
 
+        /**/
+        CWebInterface.DestroyInstance();
+
+        /**/
         CWebInterface.GetInstance().Enter();
 
-        CWebInterface.GetInstance().Request("Img1",img_url1+ "Z1pgXANlTpA" + img_url2 + "xepddd37db0XArMi49LZlYHV6N4");
-        CWebInterface.GetInstance().Request("Img1",img_url1+ "JwGCwxl1jEg" + img_url2 + "6r8zj-eF6THa0VgQvLJM7tJGO-U");
-        CWebInterface.GetInstance().Request("Img1",img_url1+ "1n73jHf48gc" + img_url2 + "2ih4gpzbIOduHl_wza-ZYjLnTeY");
-        CWebInterface.GetInstance().Request("Img1",img_url1+ "eHlSmYmpln0" + img_url2 + "zSQNEOzvBsNsT3-CR2taQg5ZA88");
-        CWebInterface.GetInstance().Request("Img1",img_url1+ "NKdz3G8fgQ4" + img_url2 + "cPuYeUBqheQdO0omsWn4QPgmiKc");
-        CWebInterface.GetInstance().Request("Img1",img_url1+ "sfsXNdKRWXg" + img_url2 + "SG_v4uWRY_BM16prvpKeme4A520");
+        m_cLoader = new CLoader();
 
-        CWebInterface.GetInstance().SetRequestCallback(new CWebInterface.RequestCallback()
+        m_cLoader.start();
+
+        m_cLoader.SetEndCallback(new CLoader.EndCallback()
         {
-            public void OnRequestCallback()
+            public void OnEndCallback()
             {
+                //Log.i("web",cData.byteData.toString());
+
+                CWebInterface.GetInstance().Exit();
+                m_cLoader.Exit();
+                m_cLoader = null;
+
                 Intent intent = new Intent(getApplicationContext(), CHome.class);
                 String message = str;
                 intent.putExtra(EXTRA_MESSAGE, message);
@@ -56,5 +76,25 @@ public class CLoading extends AppCompatActivity
                 finish();
             }
         });
+    }
+
+
+    @Override
+    protected void onDestroy()
+    {
+        Log.i("System","onDestroy");
+
+        if(m_cLoader != null)
+        {
+            m_cLoader.Exit();
+            m_cLoader = null;
+
+            CWebInterface.GetInstance().ResClear();
+            CWebInterface.GetInstance().Exit();
+
+
+        }
+
+        super.onDestroy();
     }
 }

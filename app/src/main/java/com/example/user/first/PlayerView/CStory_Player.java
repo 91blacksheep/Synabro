@@ -42,7 +42,7 @@ public class CStory_Player extends YouTubeBaseActivity implements YouTubePlayer.
 
         /**/
         pager = (ViewPager) findViewById(R.id.pager);
-        m_TalkGuideLine = new CTalkGuideLine();
+        //m_TalkGuideLine = new CTalkGuideLine();
 
     }
 
@@ -72,15 +72,12 @@ public class CStory_Player extends YouTubeBaseActivity implements YouTubePlayer.
 
         private void SetGuideLine()
         {
+            list = new CTalkGuideLine_List(getLayoutInflater());
             switch (type)
             {
                 case "우울":
-                    list = new CTalkGuideLine_List(getLayoutInflater());
-
-
                     break;
                 case "질투":
-                    list = new CTalkGuideLine_List(getLayoutInflater());
 
                     list.addItem(getDrawable(R.drawable.princess1));
                     list.addItem(getDrawable(R.drawable.princess2));
@@ -89,14 +86,11 @@ public class CStory_Player extends YouTubeBaseActivity implements YouTubePlayer.
                     list.addItem(getDrawable(R.drawable.princess5));
                     list.addItem(getDrawable(R.drawable.princess6));
                     list.addItem(getDrawable(R.drawable.princess7));
+
                     break;
                 case "눈물":
-                    list = new CTalkGuideLine_List(getLayoutInflater());
-
-
                     break;
                 case "미움":
-                    list = new CTalkGuideLine_List(getLayoutInflater());
 
                     list.addItem(getDrawable(R.drawable.tri_roll1));
                     list.addItem(getDrawable(R.drawable.tri_roll2));
@@ -105,9 +99,9 @@ public class CStory_Player extends YouTubeBaseActivity implements YouTubePlayer.
                     list.addItem(getDrawable(R.drawable.tri_roll5));
                     list.addItem(getDrawable(R.drawable.tri_roll6));
                     list.addItem(getDrawable(R.drawable.tri_roll7));
+
                     break;
                 case "두려움":
-                    list = new CTalkGuideLine_List(getLayoutInflater());
 
                     list.addItem(getDrawable(R.drawable.darknight1));
                     list.addItem(getDrawable(R.drawable.darknight2));
@@ -116,19 +110,17 @@ public class CStory_Player extends YouTubeBaseActivity implements YouTubePlayer.
                     list.addItem(getDrawable(R.drawable.darknight5));
                     list.addItem(getDrawable(R.drawable.darknight6));
                     list.addItem(getDrawable(R.drawable.darknight7));
+
                     break;
                 case "정서의형성":
-                    list = new CTalkGuideLine_List(getLayoutInflater());
 
 
                     break;
                 case "폭력":
-                    list = new CTalkGuideLine_List(getLayoutInflater());
 
 
                     break;
                 case "가족관계":
-                    list = new CTalkGuideLine_List(getLayoutInflater());
 
                     list.addItem(getDrawable(R.drawable.darknight1));
                     list.addItem(getDrawable(R.drawable.darknight2));
@@ -137,9 +129,9 @@ public class CStory_Player extends YouTubeBaseActivity implements YouTubePlayer.
                     list.addItem(getDrawable(R.drawable.darknight5));
                     list.addItem(getDrawable(R.drawable.darknight6));
                     list.addItem(getDrawable(R.drawable.darknight7));
+
                     break;
                 case "소리지르기":
-                    list = new CTalkGuideLine_List(getLayoutInflater());
 
                     list.addItem(getDrawable(R.drawable.ribbon_vil1));
                     list.addItem(getDrawable(R.drawable.ribbon_vil2));
@@ -148,34 +140,19 @@ public class CStory_Player extends YouTubeBaseActivity implements YouTubePlayer.
                     list.addItem(getDrawable(R.drawable.ribbon_vil5));
                     list.addItem(getDrawable(R.drawable.ribbon_vil6));
                     list.addItem(getDrawable(R.drawable.ribbon_vil7));
+
                     break;
                 case "비속어사용":
-                    list = new CTalkGuideLine_List(getLayoutInflater());
-
-
                     break;
                 case "교우관계":
-                    list = new CTalkGuideLine_List(getLayoutInflater());
-
-
                     break;
                 case "습관":
-                    list = new CTalkGuideLine_List(getLayoutInflater());
-
-
                     break;
                 case "간식남용":
-                    list = new CTalkGuideLine_List(getLayoutInflater());
-
-
                     break;
                 case "떼쓰기":
-                    list = new CTalkGuideLine_List(getLayoutInflater());
-
-
                     break;
                 case "심장뜀":
-                    list = new CTalkGuideLine_List((getLayoutInflater()));
 
                     list.addItem(getDrawable(R.drawable.thrashing1));
                     list.addItem(getDrawable(R.drawable.thrashing2));
@@ -184,6 +161,7 @@ public class CStory_Player extends YouTubeBaseActivity implements YouTubePlayer.
                     list.addItem(getDrawable(R.drawable.thrashing5));
                     list.addItem(getDrawable(R.drawable.thrashing6));
                     list.addItem(getDrawable(R.drawable.thrashing7));
+
                     break;
             }
 
