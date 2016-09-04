@@ -1,4 +1,4 @@
-package com.example.user.first.Story.Story.PlayerView;
+package com.example.user.first.PlayerView;
 
 import android.content.Intent;
 import android.os.Bundle;

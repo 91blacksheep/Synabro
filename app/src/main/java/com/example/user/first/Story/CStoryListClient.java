@@ -1,4 +1,4 @@
-package com.example.user.first.Story.StoryList.View;
+package com.example.user.first.Story;
 
 import android.content.Context;
 import android.content.Intent;
@@ -29,10 +29,9 @@ import com.example.user.first.Loading.Parsing.Interface.CStoryList;
 import com.example.user.first.Lib.BlacksheepLib.CBSListview;
 import com.example.user.first.Lib.BlacksheepLib.CBSListviewAdapter;
 import com.example.user.first.Lib.BlacksheepLib.CBSListviewData;
-import com.example.user.first.Loading.Parsing.Lib.CStoryData;
 import com.example.user.first.R;
 import com.example.user.first.Setting.CSetting_List;
-import com.example.user.first.Story.Story.PlayerView.CStory_Player;
+import com.example.user.first.PlayerView.CStory_Player;
 import com.example.user.first.UiSetting.CMyText;
 
 /**

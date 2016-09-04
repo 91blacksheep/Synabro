@@ -1,4 +1,4 @@
-package com.example.user.first.Loading.Parsing.Lib;
+package com.example.user.first.Story;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -14,7 +14,7 @@ import java.net.URL;
 /**
  * Created by KICT-15 on 2016-07-05.
  */
-public class CStoryData
+public class CStoryDataList
 {
     final String img_url = "https://i.ytimg.com/vi/PaBwPRa__ic/hqdefault.jpg?custom=true&w=196&h=110&stc=true&jpg444=true&jpgq=90&sp=68&sigh=";
 
@@ -39,12 +39,12 @@ public class CStoryData
     private String m_type;
     Bitmap bmp;
 
-    public CStoryData()
+    public CStoryDataList()
     {
 
     }
 
-    public CStoryData(String thumbnail, String title, String ex, String url, String group, String type)
+    public CStoryDataList(String thumbnail, String title, String ex, String url, String group, String type)
     {
         this.m_thumbnail = thumbnail;
         this.m_title = title;
