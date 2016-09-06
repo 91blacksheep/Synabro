@@ -43,7 +43,6 @@ public class CStory_Player extends YouTubeBaseActivity implements YouTubePlayer.
         /**/
         pager = (ViewPager) findViewById(R.id.pager);
         m_TalkGuideLine = new CTalkGuideLine();
-        //m_TalkGuideLine = new CTalkGuideLine();
     }
 
     public void onClickButton(View v)

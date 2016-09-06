@@ -25,8 +25,8 @@
         <activity android:name=".Emotion.CAnger" />
         <activity android:name=".Emotion.CDisGust" />
         <activity android:name=".Emotion.CPanic" />
-        <activity android:name=".Story.StoryList.View.CStoryListClient" />
-        <activity android:name=".Story.Story.PlayerView.CStory_Player" />
+        <activity android:name=".Story.CStoryListClient" />
+        <activity android:name=".PlayerView.CStory_Player" />
         <activity android:name=".UiSetting.CMyText" />
     </application>
     <uses-permission android:name="android.permission.INTERNET" />
