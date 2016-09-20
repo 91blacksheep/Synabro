@@ -192,6 +192,7 @@ public class CWebInterface extends Thread
 
         while(m_bActive == true)
         {
+            Log.i("Run","test");
             /*
             try
             {
@@ -209,9 +210,9 @@ public class CWebInterface extends Thread
                 Log.i("CWebInterface","run");
 
                 nCount = m_ReqList.size();
-                if(nCount <= 0)
+                if (nCount <= 0)
                 {
-                    if(m_Callback != null)
+                    if (m_Callback != null)
                     {
                         m_Callback.OnRequestCallback();
                         m_Callback = null;
@@ -243,13 +244,12 @@ public class CWebInterface extends Thread
 
                 in.close();
                 url = null;
-            }
-            catch (MalformedURLException e)
+
+            } catch (MalformedURLException e)
             {
                 cData.eState = EState.error;
                 cData.strErr = e.toString();
-            }
-            catch (IOException e)
+            } catch (IOException e)
             {
                 cData.eState = EState.error;
                 cData.strErr = e.toString();

@@ -1,16 +1,9 @@
 package com.example.user.first.Loading.Client;
 
-import android.content.Intent;
-import android.os.SystemClock;
 import android.util.Log;
 
-import com.example.user.first.Home.CHome;
 import com.example.user.first.Lib.BlacksheepLib.CWebInterface;
 import com.example.user.first.Story.CStoryDataList;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.io.UnsupportedEncodingException;
 
