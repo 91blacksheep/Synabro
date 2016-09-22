@@ -16,17 +16,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Loading.Client.CLoading" />
-        <activity android:name=".Home.CHome" />
-        <activity android:name=".Emotion.CEmotion_List" />
-        <activity android:name=".Setting.CSetting_List" />
-        <activity android:name=".Emotion.CHappy" />
-        <activity android:name=".Emotion.CSad" />
-        <activity android:name=".Emotion.CAnger" />
-        <activity android:name=".Emotion.CDisGust" />
-        <activity android:name=".Emotion.CPanic" />
-        <activity android:name=".Story.CStoryListClient" />
-        <activity android:name=".PlayerView.CStory_Player" />
+        <activity android:name=".Loading.Client.CLoadingClient" />
+        <activity android:name=".Home.CHomeClient" />
+        <activity android:name=".Emotion.Client.CEmotionClient" />
+        <activity android:name=".Setting.CSettingClient" />
+        <activity android:name=".StoryList.Client.CStoryListClient" />
+        <activity android:name=".StoryPlayer.Client.CStoryPlayerClient" />
         <activity android:name=".UiSetting.CMyText" />
     </application>
     <uses-permission android:name="android.permission.INTERNET" />

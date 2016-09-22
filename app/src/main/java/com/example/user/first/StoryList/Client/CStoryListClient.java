@@ -1,9 +1,8 @@
-package com.example.user.first.Story;
+package com.example.user.first.StoryList.Client;
 
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.NavigationView;
@@ -23,16 +22,15 @@ import android.widget.ListView;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
-import com.example.user.first.Emotion.CEmotion_List;
-import com.example.user.first.Home.CHome;
-import com.example.user.first.Lib.BlacksheepLib.CWebInterface;
-import com.example.user.first.Loading.Parsing.Interface.CStoryList;
+import com.example.user.first.Emotion.Client.CEmotionClient;
+import com.example.user.first.Home.CHomeClient;
 import com.example.user.first.Lib.BlacksheepLib.CBSListview;
 import com.example.user.first.Lib.BlacksheepLib.CBSListviewAdapter;
 import com.example.user.first.Lib.BlacksheepLib.CBSListviewData;
 import com.example.user.first.R;
-import com.example.user.first.Setting.CSetting_List;
-import com.example.user.first.PlayerView.CStory_Player;
+import com.example.user.first.Setting.CSettingClient;
+import com.example.user.first.StoryPlayer.Client.CStoryPlayerClient;
+import com.example.user.first.StoryList.Interface.CStoryDataList;
 import com.example.user.first.UiSetting.CMyText;
 
 /**
@@ -43,12 +41,12 @@ public class CStoryListClient extends AppCompatActivity implements NavigationVie
 
     class CItem extends CBSListviewData
     {
-        public String m_title = null;
-        public String m_ex = null;
-        public String m_url = null;
-        public String m_group = null;
-        public String m_type = null;
-        public Bitmap bmpIcon = null;
+        String m_title = null;
+        String m_ex = null;
+        String m_url = null;
+        String m_group = null;
+        String m_type = null;
+        Bitmap bmpIcon = null;
     }
 
     /* value */
@@ -58,14 +56,11 @@ public class CStoryListClient extends AppCompatActivity implements NavigationVie
     CBSListview cBSListview;
     ScrollView scrollView;
     Toolbar toolbar;
-    View nav_header_view;
-    TextView nav_header_txt;
+    View navHeaderView;
+    TextView navHeaderTxt;
     NavigationView navigationView;
 
     String message;
-
-    //public ListView listView;
-    //public CStoryList cStoryList = null;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState)
@@ -74,8 +69,6 @@ public class CStoryListClient extends AppCompatActivity implements NavigationVie
         setContentView(R.layout.story_list_layout);
 
         /**/
-        //cStoryList = new CStoryList(this);
-
         scrollView = (ScrollView)findViewById(R.id.scrView);
 
         /**/
@@ -110,13 +103,13 @@ public class CStoryListClient extends AppCompatActivity implements NavigationVie
         navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        nav_header_view = navigationView.getHeaderView(0);
-        nav_header_txt = (TextView)nav_header_view.findViewById(R.id.mytext);
+        navHeaderView = navigationView.getHeaderView(0);
+        navHeaderTxt = (TextView)navHeaderView.findViewById(R.id.mytext);
 
         /* 나만의 글귀 */
         Intent intent = getIntent();
         message = intent.getStringExtra(CMyText.EXTRA_MESSAGE);
-        nav_header_txt.setText(message);
+        navHeaderTxt.setText(message);
 
         /* 리스트 아이템 Init*/
         //listView.setAdapter(cStoryList);
@@ -207,7 +200,7 @@ public class CStoryListClient extends AppCompatActivity implements NavigationVie
             String url = item.m_url;
             String type = item.m_type;
 
-            Intent intent = new Intent(getApplicationContext(), CStory_Player.class);
+            Intent intent = new Intent(getApplicationContext(), CStoryPlayerClient.class);
             intent.putExtra("url", url);
             intent.putExtra("type", type);
             startActivityForResult(intent, 0);
@@ -237,7 +230,7 @@ public class CStoryListClient extends AppCompatActivity implements NavigationVie
 
         if(id == R.id.nav_home)
         {
-            Intent intent = new Intent(getApplicationContext(), CHome.class);
+            Intent intent = new Intent(getApplicationContext(), CHomeClient.class);
             startActivity(intent);
         }
         else if (id == R.id.nav_storybook)
@@ -247,17 +240,17 @@ public class CStoryListClient extends AppCompatActivity implements NavigationVie
         }
         else if (id == R.id.nav_emotion_list)
         {
-            Intent intent = new Intent(getApplicationContext(), CEmotion_List.class);
+            Intent intent = new Intent(getApplicationContext(), CEmotionClient.class);
             startActivity(intent);
         }
         else if (id == R.id.nav_setting)
         {
-            Intent intent = new Intent(getApplicationContext(), CSetting_List.class);
+            Intent intent = new Intent(getApplicationContext(), CSettingClient.class);
             startActivity(intent);
         }
         else if (id == R.id.nav_btn4)
         {
-            Intent intent = new Intent(getApplicationContext(), CStory_Player.class);
+            Intent intent = new Intent(getApplicationContext(), CStoryPlayerClient.class);
             startActivity(intent);
         }
         else if (id == R.id.nav_btn5)

@@ -1,4 +1,4 @@
-package com.example.user.first.PlayerView;
+package com.example.user.first.StoryPlayer.Client;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.example.user.first.Lib.CDeveloperKey;
-import com.example.user.first.Loading.Parsing.Interface.CTalkGuideLine_List;
+import com.example.user.first.StoryPlayer.TalkGuideLine.Interface.CTalkGuideLine_List;
 import com.example.user.first.R;
 import com.google.android.youtube.player.YouTubeBaseActivity;
 import com.google.android.youtube.player.YouTubeInitializationResult;
@@ -18,7 +18,7 @@ import com.google.android.youtube.player.YouTubePlayerView;
 /**
  * Created by KICT-15 on 2016-07-08.
  */
-public class CStory_Player extends YouTubeBaseActivity implements YouTubePlayer.OnInitializedListener
+public class CStoryPlayerClient extends YouTubeBaseActivity implements YouTubePlayer.OnInitializedListener
 {
     ViewPager pager;
     String url = null;

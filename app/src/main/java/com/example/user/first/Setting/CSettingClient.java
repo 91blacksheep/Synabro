@@ -1,4 +1,4 @@
-package com.example.user.first.Emotion;
+package com.example.user.first.Setting;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,31 +9,61 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 
-import com.example.user.first.Home.CHome;
+import com.example.user.first.Emotion.Client.CEmotionClient;
+import com.example.user.first.Home.CHomeClient;
 import com.example.user.first.R;
-import com.example.user.first.Setting.CSetting_List;
-import com.example.user.first.PlayerView.CStory_Player;
-import com.example.user.first.Story.CStoryListClient;
+import com.example.user.first.StoryPlayer.Client.CStoryPlayerClient;
+import com.example.user.first.StoryList.Client.CStoryListClient;
+import com.example.user.first.UiSetting.CMyText;
+import com.example.user.first.UiSetting.CTextPosition;
 
 /**
  * Created by USER on 2016-06-26.
  */
-public class CPanic extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener
+public class CSettingClient extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener
 {
+    TextView btnWording, btnQnA, btnTutorial, btnCreate, btn5;
+
+    String message;
+
     Toolbar toolbar;
+    View navHeaderView;
+    TextView navHeaderTxt;
     NavigationView navigationView;
 
+    CTextPosition cTextPosition = null;
+
+    @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.emotion_panic_layout);
+        setContentView(R.layout.setting_list_layout);
+
+        btnWording = (TextView)findViewById(R.id.wording);
+        btnQnA = (TextView)findViewById(R.id.QnA);
+        btnTutorial = (TextView)findViewById(R.id.tutorial);
+        btnCreate = (TextView)findViewById(R.id.create);
+        btn5 = (TextView)findViewById(R.id.btn5);
 
         /**/
+        cTextPosition = new CTextPosition(btnWording, btnQnA, btnTutorial, btnCreate, btn5, this);
+
+        /* 네비게이션 드로어 초기화 */
         SetNav();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        navHeaderView = navigationView.getHeaderView(0);
+        navHeaderTxt = (TextView)navHeaderView.findViewById(R.id.mytext);
+
+        /* 나만의 글귀 */
+        Intent intent = getIntent();
+        message = intent.getStringExtra(CMyText.EXTRA_MESSAGE);
+        navHeaderTxt.setText(message);
     }
 
     private void SetNav()
@@ -52,6 +82,23 @@ public class CPanic extends AppCompatActivity implements NavigationView.OnNaviga
 
         navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+    }
+
+    public void onClickButton(View v)
+    {
+        switch(v.getId())
+        {
+            case R.id.wording:
+                break;
+            case R.id.QnA:
+                break;
+            case R.id.tutorial:
+                break;
+            case R.id.create:
+                break;
+            case R.id.btn5:
+                break;
+        }
     }
 
     @Override
@@ -77,7 +124,7 @@ public class CPanic extends AppCompatActivity implements NavigationView.OnNaviga
 
         if(id == R.id.nav_home)
         {
-            Intent intent = new Intent(getApplicationContext(), CHome.class);
+            Intent intent = new Intent(getApplicationContext(), CHomeClient.class);
             startActivity(intent);
         }
         else if (id == R.id.nav_storybook)
@@ -87,17 +134,17 @@ public class CPanic extends AppCompatActivity implements NavigationView.OnNaviga
         }
         else if (id == R.id.nav_emotion_list)
         {
-            Intent intent = new Intent(getApplicationContext(), CEmotion_List.class);
+            Intent intent = new Intent(getApplicationContext(), CEmotionClient.class);
             startActivity(intent);
         }
         else if (id == R.id.nav_setting)
         {
-            Intent intent = new Intent(getApplicationContext(), CSetting_List.class);
+            Intent intent = new Intent(getApplicationContext(), CSettingClient.class);
             startActivity(intent);
         }
         else if (id == R.id.nav_btn4)
         {
-            Intent intent = new Intent(getApplicationContext(), CStory_Player.class);
+            Intent intent = new Intent(getApplicationContext(), CStoryPlayerClient.class);
             startActivity(intent);
         }
         else if (id == R.id.nav_btn5)

@@ -192,7 +192,7 @@ public class CWebInterface extends Thread
 
         while(m_bActive == true)
         {
-            Log.i("Run","test");
+            //Log.i("Run","test");
             /*
             try
             {
@@ -207,7 +207,7 @@ public class CWebInterface extends Thread
             /**/
             try
             {
-                Log.i("CWebInterface","run");
+               // Log.i("CWebInterface","run");
 
                 nCount = m_ReqList.size();
                 if (nCount <= 0)

@@ -1,10 +1,11 @@
-package com.example.user.first.Story;
+package com.example.user.first.StoryList.Interface;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.util.Log;
 
 import com.example.user.first.Lib.BlacksheepLib.CWebInterface;
+import com.example.user.first.Lib.CDefineUrl;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -17,26 +18,22 @@ import java.util.ArrayList;
  */
 public class CStoryDataList
 {
-    final String img_url1 = "https://i.ytimg.com/vi/";
-    final String img_url2 = "/hqdefault.jpg?custom=true&w=196&h=110&stc=true&jpg444=true&jpgq=90&sp=68&sigh=";
-
     /* class */
     public class CData
     {
-        String strTitle = null;
-        String strEx = null;
-        String strUrl = null;
-        String strGroup = null;
-        String strType = null;
+        public String strTitle = null;
+        public String strEx = null;
+        public String strUrl = null;
+        public String strGroup = null;
+        public String strType = null;
 
-        Bitmap bmpIcon = null;
+        public Bitmap bmpIcon = null;
     }
 
     /* vluse */
     private ArrayList<CData> m_list = null;
 
-
-    static CStoryDataList instance = null;
+    private static CStoryDataList instance = null;
 
     /*
      * *
@@ -93,7 +90,7 @@ public class CStoryDataList
 
                 m_list.add(cData);
 
-                CWebInterface.GetInstance().Request("Img"+i,img_url1+ strImg_url1 + img_url2 + strImg_url2);
+                CWebInterface.GetInstance().Request("Img" + i, CDefineUrl.youtubeThumbnail1 + strImg_url1 + CDefineUrl.youtubeThumbnail2 + strImg_url2);
 
                 Log.i("Data:",json.getString("name"));
 
@@ -102,7 +99,7 @@ public class CStoryDataList
         catch (JSONException e)
         {
             e.printStackTrace();
-            Log.i("json","json err!! "+e);
+            Log.i("json","json err!! " + e);
 
             return;
         }
@@ -110,7 +107,6 @@ public class CStoryDataList
 
     public void LoadingIcon()
     {
-
         CData cData;
         CWebInterface.CData cWebData = null;
         Bitmap bmp = null;
@@ -119,20 +115,20 @@ public class CStoryDataList
         int size = m_list.size();
         while(i < size)
         {
-            cWebData = CWebInterface.GetInstance().Find("Img"+i);
+            cWebData = CWebInterface.GetInstance().Find("Img" + i);
 
             if(cWebData == null)
                 continue;
 
             if(cWebData.eState == CWebInterface.EState.error)
             {
-                Log.i("error",cWebData.strErr);
+                Log.i("error", cWebData.strErr);
                 return;
             }
 
             bmp = BitmapFactory.decodeByteArray(cWebData.byteData, 0, cWebData.byteData.length);
 
-            CWebInterface.GetInstance().Remove("Img"+i);
+            CWebInterface.GetInstance().Remove("Img" + i);
 
             if(bmp == null)
             {

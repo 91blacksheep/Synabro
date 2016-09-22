@@ -6,15 +6,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.TextView;
 
-import com.example.user.first.Home.CHome;
+import com.example.user.first.Home.CHomeClient;
 import com.example.user.first.Lib.CTextFileManager;
 import com.example.user.first.Lib.BlacksheepLib.CWebInterface;
+import com.example.user.first.Loading.Interface.CLoader;
 import com.example.user.first.R;
 
 /**
  * Created by Administrator on 2016-07-22.
  */
-public class CLoading extends AppCompatActivity
+public class CLoadingClient extends AppCompatActivity
 {
 
     CLoader m_cLoader = null;
@@ -24,7 +25,6 @@ public class CLoading extends AppCompatActivity
     public final static String EXTRA_MESSAGE = "unikys.todo.MESSAGE";
 
     CTextFileManager cTextFileManager = null;
-
 
     /*
     * *
@@ -61,7 +61,7 @@ public class CLoading extends AppCompatActivity
                 m_cLoader.Exit();
                 m_cLoader = null;
 
-                Intent intent = new Intent(getApplicationContext(), CHome.class);
+                Intent intent = new Intent(getApplicationContext(), CHomeClient.class);
                 String message = str;
                 intent.putExtra(EXTRA_MESSAGE, message);
                 startActivity(intent);

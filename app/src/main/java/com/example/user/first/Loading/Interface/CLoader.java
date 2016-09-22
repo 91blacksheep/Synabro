@@ -1,9 +1,10 @@
-package com.example.user.first.Loading.Client;
+package com.example.user.first.Loading.Interface;
 
 import android.util.Log;
 
+import com.example.user.first.Emotion.Interface.CEmotionDataList;
 import com.example.user.first.Lib.BlacksheepLib.CWebInterface;
-import com.example.user.first.Story.CStoryDataList;
+import com.example.user.first.StoryList.Interface.CStoryDataList;
 
 import java.io.UnsupportedEncodingException;
 
@@ -13,6 +14,8 @@ import java.io.UnsupportedEncodingException;
 
 public class CLoader extends Thread
 {
+
+
     CWebInterface.CData cData = null;
     EndCallback m_Callback = null;
 
@@ -47,10 +50,11 @@ public class CLoader extends Thread
         Log.i("CLoader","0%");
 
         CWebInterface.GetInstance().Request("json_data","https://raw.githubusercontent.com/91blacksheep/Synabro/master/web_data/json_data.data");
+        CWebInterface.GetInstance().Request("talkGuideLine_JSON_DATA","https://github.com/Jo-jangho/Synabro/blob/master/web_data/talkGuideLine_JSON_DATA.data");
 
         CWebInterface.CData cData = null;
+        String strJsonData = null;
 
-        String strData = null;
         while (true)
         {
             if(m_bActive == false)
@@ -72,8 +76,8 @@ public class CLoader extends Thread
             try
             {
                 //strData = new String(cData.byteData,"EUC-KR");
-                strData = new String(cData.byteData,"UTF-8");
-                Log.i("web",strData);
+                strJsonData = new String(cData.byteData,"UTF-8");
+                Log.i("web",strJsonData);
             }
             catch (UnsupportedEncodingException e)
             {
@@ -89,8 +93,51 @@ public class CLoader extends Thread
         Log.i("CLoader","50%");
 
         /**/
-        CStoryDataList.GetInstance().Init(strData);
+        CStoryDataList.GetInstance().Init(strJsonData);
         CStoryDataList.GetInstance().LoadingIcon();
+
+        Log.i("CLoader","60%");
+
+        cData = null;
+        strJsonData = null;
+
+        while (true)
+        {
+            if(m_bActive == false)
+                return;
+
+            cData = CWebInterface.GetInstance().Find("talkGuideLine_JSON_DATA");
+
+            if(cData == null)
+            {
+                continue;
+            }
+
+            if (cData.strErr != null)
+            {
+                Log.i("web", cData.strErr);
+                return;
+            }
+
+            try
+            {
+                //strData = new String(cData.byteData,"EUC-KR");
+                strJsonData = new String(cData.byteData,"UTF-8");
+                Log.i("web",strJsonData);
+            }
+            catch (UnsupportedEncodingException e)
+            {
+                e.printStackTrace();
+
+                Log.i("web","error");
+                return;
+            }
+
+            break;
+        }
+
+        CEmotionDataList.GetInstance().Init(strJsonData);
+        CEmotionDataList.GetInstance().LoadingIcon();
 
         CWebInterface.GetInstance().ResClear();
 

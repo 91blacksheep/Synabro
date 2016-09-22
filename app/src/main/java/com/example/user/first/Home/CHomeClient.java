@@ -1,4 +1,4 @@
-package com.example.user.first.Setting;
+package com.example.user.first.Home;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,60 +10,61 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.user.first.Emotion.CEmotion_List;
-import com.example.user.first.Home.CHome;
-import com.example.user.first.R;
-import com.example.user.first.PlayerView.CStory_Player;
-import com.example.user.first.Story.CStoryListClient;
+import com.example.user.first.Lib.CTextFileManager;
+import com.example.user.first.Loading.Client.CLoadingClient;
 import com.example.user.first.UiSetting.CMyText;
-import com.example.user.first.UiSetting.CTextPosition;
+import com.example.user.first.Emotion.Client.CEmotionClient;
+import com.example.user.first.R;
+import com.example.user.first.Setting.CSettingClient;
+import com.example.user.first.StoryPlayer.Client.CStoryPlayerClient;
+import com.example.user.first.StoryList.Client.CStoryListClient;
 
-/**
- * Created by USER on 2016-06-26.
- */
-public class CSetting_List extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener
+public class CHomeClient extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener
 {
-    TextView btnWording, btnQnA, btnTutorial, btnCreate, btn5;
+    /* var */
+    ImageView homeStory, homeEmotion, homeMemo, homeWorkshop, homeSetting;
+    TextView myText;
+
+    Toolbar toolbar;
+    View navHeaderView;
+    TextView navHeaderTxt;
+    NavigationView navigationView;
 
     String message;
 
-    Toolbar toolbar;
-    View nav_header_view;
-    TextView nav_header_txt;
-    NavigationView navigationView;
+    CTextFileManager cTextFileManager = null;
 
-    CTextPosition cTextPosition = null;
-
+    /* method */
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.setting_list_layout);
-
-        btnWording = (TextView)findViewById(R.id.wording);
-        btnQnA = (TextView)findViewById(R.id.QnA);
-        btnTutorial = (TextView)findViewById(R.id.tutorial);
-        btnCreate = (TextView)findViewById(R.id.create);
-        btn5 = (TextView)findViewById(R.id.btn5);
+        setContentView(R.layout.main_home_layout);
 
         /**/
-        cTextPosition = new CTextPosition(btnWording, btnQnA, btnTutorial, btnCreate, btn5, this);
+        homeStory = (ImageView)findViewById(R.id.home_story);
+        homeEmotion = (ImageView)findViewById(R.id.home_emotion);
+        homeMemo = (ImageView)findViewById(R.id.home_memo);
+        homeWorkshop = (ImageView)findViewById(R.id.home_workshop);
+        homeSetting = (ImageView)findViewById(R.id.home_setting);
+        myText = (TextView)findViewById(R.id.mytext);
 
         /* 네비게이션 드로어 초기화 */
         SetNav();
-
-        navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
-
-        nav_header_view = navigationView.getHeaderView(0);
-        nav_header_txt = (TextView)nav_header_view.findViewById(R.id.mytext);
+        navHeaderView = navigationView.getHeaderView(0);
+        navHeaderTxt = (TextView)navHeaderView.findViewById(R.id.mytext);
 
         /* 나만의 글귀 */
         Intent intent = getIntent();
         message = intent.getStringExtra(CMyText.EXTRA_MESSAGE);
-        nav_header_txt.setText(message);
+        navHeaderTxt.setText(message);
+        myText.setText(message);
+
+        cTextFileManager = new CTextFileManager(this);
+        cTextFileManager.save(message);
     }
 
     private void SetNav()
@@ -88,15 +89,29 @@ public class CSetting_List extends AppCompatActivity implements NavigationView.O
     {
         switch(v.getId())
         {
-            case R.id.wording:
+            case R.id.changetext:
+                Intent intent1 = new Intent(getApplicationContext(), CMyText.class);
+                startActivity(intent1);
+                finish();
                 break;
-            case R.id.QnA:
+            case R.id.home_story:
+                Intent intent2 = new Intent(getApplicationContext(), CStoryListClient.class);
+                intent2.putExtra(CLoadingClient.EXTRA_MESSAGE, message);
+                startActivity(intent2);
                 break;
-            case R.id.tutorial:
+            case R.id.home_emotion:
+                Intent intent3 = new Intent(getApplicationContext(), CEmotionClient.class);
+                intent3.putExtra(CLoadingClient.EXTRA_MESSAGE, message);
+                startActivity(intent3);
                 break;
-            case R.id.create:
+            case R.id.home_memo:
+                Intent intent4 = new Intent(getApplicationContext(), CSettingClient.class);
+                intent4.putExtra(CLoadingClient.EXTRA_MESSAGE, message);
+                startActivity(intent4);
                 break;
-            case R.id.btn5:
+            case R.id.home_workshop:
+                break;
+            case R.id.home_setting:
                 break;
         }
     }
@@ -124,28 +139,33 @@ public class CSetting_List extends AppCompatActivity implements NavigationView.O
 
         if(id == R.id.nav_home)
         {
-            Intent intent = new Intent(getApplicationContext(), CHome.class);
+            Intent intent = new Intent(getApplicationContext(), CHomeClient.class);
             startActivity(intent);
+            finish();
         }
         else if (id == R.id.nav_storybook)
         {
             Intent intent = new Intent(getApplicationContext(), CStoryListClient.class);
             startActivity(intent);
+            finish();
         }
         else if (id == R.id.nav_emotion_list)
         {
-            Intent intent = new Intent(getApplicationContext(), CEmotion_List.class);
+            Intent intent = new Intent(getApplicationContext(), CEmotionClient.class);
             startActivity(intent);
+            finish();
         }
         else if (id == R.id.nav_setting)
         {
-            Intent intent = new Intent(getApplicationContext(), CSetting_List.class);
+            Intent intent = new Intent(getApplicationContext(), CSettingClient.class);
             startActivity(intent);
+            finish();
         }
         else if (id == R.id.nav_btn4)
         {
-            Intent intent = new Intent(getApplicationContext(), CStory_Player.class);
+            Intent intent = new Intent(getApplicationContext(), CStoryPlayerClient.class);
             startActivity(intent);
+            finish();
         }
         else if (id == R.id.nav_btn5)
         {
