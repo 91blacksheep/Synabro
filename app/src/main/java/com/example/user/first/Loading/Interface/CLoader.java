@@ -50,7 +50,7 @@ public class CLoader extends Thread
         Log.i("CLoader","0%");
 
         CWebInterface.GetInstance().Request("json_data","https://raw.githubusercontent.com/91blacksheep/Synabro/master/web_data/json_data.data");
-        CWebInterface.GetInstance().Request("talkGuideLine_JSON_DATA","https://github.com/Jo-jangho/Synabro/blob/master/web_data/talkGuideLine_JSON_DATA.data");
+        CWebInterface.GetInstance().Request("Emotion_JSON_DATA","https://github.com/Jo-jangho/Synabro/blob/master/web_data/talkGuideLine_JSON_DATA.data");
 
         CWebInterface.CData cData = null;
         String strJsonData = null;
@@ -106,7 +106,7 @@ public class CLoader extends Thread
             if(m_bActive == false)
                 return;
 
-            cData = CWebInterface.GetInstance().Find("talkGuideLine_JSON_DATA");
+            cData = CWebInterface.GetInstance().Find("Emotion_JSON_DATA");
 
             if(cData == null)
             {
