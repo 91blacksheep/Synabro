@@ -35,21 +35,21 @@ public class CEmotionDataList
      * *
      */
 
-    public static CEmotionDataList GetInstance()
+    public static CEmotionDataList GetInstance ()
     {
-        if(instance != null)
+        if ( instance != null )
         {
             return instance;
         }
 
-        instance = new CEmotionDataList();
+        instance = new CEmotionDataList ();
 
         return instance;
     }
 
-    public void Init(String strJsonArray)
+    public void Init ( String strJsonArray )
     {
-        m_list = new ArrayList<CEmotionDataList.CData>();
+        m_list = new ArrayList<CEmotionDataList.CData> ();
 
         JSONArray jsonArray = null;
         String strImg_url1 = null;
@@ -57,70 +57,73 @@ public class CEmotionDataList
         CEmotionDataList.CData cData = null;
         try
         {
-            jsonArray = new JSONArray(strJsonArray);
+            jsonArray = new JSONArray ( strJsonArray );
 
             /**/
             JSONObject json = null;
-            int i = jsonArray.length();
-            while (--i >= 0)
+            int size = jsonArray.length ();
+            int i = 0;
+            while ( i < size )
             {
-                json = jsonArray.getJSONObject(i);
+                json = jsonArray.getJSONObject ( i );
 
                 /**/
-                cData = new CEmotionDataList.CData();
+                cData = new CEmotionDataList.CData ();
 
-                cData.strUrl = json.getString("url");
+                cData.strUrl = json.getString ( "url" );
 
-                Log.i ("Json Log:",cData.strUrl);
+                Log.i ( "Json Log:", cData.strUrl );
 
                 cData.bmpIcon = null;
 
-                m_list.add(cData);
+                m_list.add ( cData );
 
-                CWebInterface.GetInstance().Request("Emotion_Img" + i, CDefineUrl.gitRes +  cData.strUrl);
+                CWebInterface.GetInstance ().Request ( "Emotion_Img" + i, CDefineUrl.gitRes + cData.strUrl );
+
+                i++;
             }
         }
-        catch (JSONException e)
+        catch ( JSONException e )
         {
-            e.printStackTrace();
-            Log.i("json","json err!! "+e);
+            e.printStackTrace ();
+            Log.i ( "json", "json err!! " + e );
         }
     }
 
-    public void LoadingIcon()
+    public void LoadingIcon ()
     {
-
         CEmotionDataList.CData cData;
         CWebInterface.CData cWebData = null;
         Bitmap bmp = null;
 
         int i = 0;
-        int size = m_list.size();
-        while(i < size)
+        int size = m_list.size ();
+        while ( i < size )
         {
-            cWebData = CWebInterface.GetInstance().Find("Emotion_Img"+i);
+            cWebData = CWebInterface.GetInstance ().Find ( "Emotion_Img" + i );
 
-            if(cWebData == null)
+            if ( cWebData == null )
+            {
                 continue;
+            }
 
-            if(cWebData.eState == CWebInterface.EState.error)
+            if ( cWebData.eState == CWebInterface.EState.error )
             {
-                Log.i("error",cWebData.strErr);
+                Log.i ( "error", cWebData.strErr );
                 return;
             }
 
-            bmp = BitmapFactory.decodeByteArray(cWebData.byteData, 0, cWebData.byteData.length);
-            //Log.i("bmp :", bmp.toString());
+            bmp = BitmapFactory.decodeByteArray ( cWebData.byteData, 0, cWebData.byteData.length );
 
-            CWebInterface.GetInstance().Remove("Emotion_Img"+i);
+            CWebInterface.GetInstance ().Remove ( "Emotion_Img" + i );
 
-            if(bmp == null)
+            if ( bmp == null )
             {
-                Log.i("error","bmp is null");
+                Log.i ( "error", "bmp is null" );
                 return;
             }
 
-            cData = m_list.get(i);
+            cData = m_list.get ( i );
 
             cData.bmpIcon = bmp;
 
@@ -131,13 +134,13 @@ public class CEmotionDataList
 
     //////////////////////////////////////////////////////////////////////////////////////////////
     //
-    public int Size()
+    public int Size ()
     {
-        return  m_list.size();
+        return m_list.size ();
     }
 
-    public CEmotionDataList.CData Get(int idx)
+    public CEmotionDataList.CData Get ( int idx )
     {
-        return m_list.get(idx);
+        return m_list.get ( idx );
     }
 }
