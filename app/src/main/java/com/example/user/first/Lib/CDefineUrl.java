@@ -10,7 +10,7 @@ import com.example.user.first.StoryList.Interface.CStoryDataList;
 public class CDefineUrl
 {
     // 깃허브 리소스 URL
-    static public final String gitRes = "https://github.com/Jo-jangho/Resource/blob/master/";
+    static public final String gitRes = "https://raw.githubusercontent.com/Jo-jangho/Resource/master/";
 
     // 유튜브 썸네일 URL
     static public final String youtubeThumbnail1 = "https://i.ytimg.com/vi/";

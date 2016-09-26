@@ -26,7 +26,7 @@ public class CEmotionDataList
         public Bitmap bmpIcon = null;
     }
 
-    /* vluse */
+    /* value */
     private ArrayList<CEmotionDataList.CData> m_list = null;
 
     private static CEmotionDataList instance = null;
@@ -69,18 +69,15 @@ public class CEmotionDataList
                 /**/
                 cData = new CEmotionDataList.CData();
 
-                strImg_url1 = json.getString("img_id1");
-
                 cData.strUrl = json.getString("url");
+
+                Log.i ("Json Log:",cData.strUrl);
 
                 cData.bmpIcon = null;
 
                 m_list.add(cData);
 
-                CWebInterface.GetInstance().Request("Img" + i, CDefineUrl.gitRes + strImg_url1);
-
-                Log.i("Data:",json.getString("name"));
-
+                CWebInterface.GetInstance().Request("Emotion_Img" + i, CDefineUrl.gitRes +  cData.strUrl);
             }
         }
         catch (JSONException e)
@@ -101,7 +98,7 @@ public class CEmotionDataList
         int size = m_list.size();
         while(i < size)
         {
-            cWebData = CWebInterface.GetInstance().Find("Img"+i);
+            cWebData = CWebInterface.GetInstance().Find("Emotion_Img"+i);
 
             if(cWebData == null)
                 continue;
@@ -113,8 +110,9 @@ public class CEmotionDataList
             }
 
             bmp = BitmapFactory.decodeByteArray(cWebData.byteData, 0, cWebData.byteData.length);
+            //Log.i("bmp :", bmp.toString());
 
-            CWebInterface.GetInstance().Remove("Img"+i);
+            CWebInterface.GetInstance().Remove("Emotion_Img"+i);
 
             if(bmp == null)
             {
@@ -125,6 +123,7 @@ public class CEmotionDataList
             cData = m_list.get(i);
 
             cData.bmpIcon = bmp;
+
 
             i++;
         }

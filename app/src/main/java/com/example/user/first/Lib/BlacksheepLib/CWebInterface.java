@@ -80,7 +80,6 @@ public class CWebInterface extends Thread
     {
         m_ReqList = new ArrayList<CData>();
         m_ResList = new ArrayList<CData>();
-
     }
 
     public void Request(String strID, String strUrl)
@@ -245,14 +244,24 @@ public class CWebInterface extends Thread
                 in.close();
                 url = null;
 
-            } catch (MalformedURLException e)
+            }
+            catch (MalformedURLException e)
             {
+                Log.d ( "WebError!!!", e.toString () );
+
                 cData.eState = EState.error;
                 cData.strErr = e.toString();
-            } catch (IOException e)
+
+                continue;
+            }
+            catch (IOException e)
             {
+                Log.d ( "WebError!!!", e.toString () );
+
                 cData.eState = EState.error;
                 cData.strErr = e.toString();
+
+                continue;
             }
 
             m_ReqList.remove(0);

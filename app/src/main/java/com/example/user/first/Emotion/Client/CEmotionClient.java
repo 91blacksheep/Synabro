@@ -9,6 +9,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
@@ -18,8 +19,8 @@ import com.example.user.first.Emotion.Interface.CEmotionDataList;
 import com.example.user.first.Home.CHomeClient;
 import com.example.user.first.R;
 import com.example.user.first.Setting.CSettingClient;
-import com.example.user.first.StoryPlayer.Client.CStoryPlayerClient;
 import com.example.user.first.StoryList.Client.CStoryListClient;
+import com.example.user.first.StoryPlayer.Client.CStoryPlayerClient;
 import com.example.user.first.UiSetting.CMyText;
 
 import java.util.ArrayList;
@@ -39,8 +40,8 @@ public class CEmotionClient extends AppCompatActivity implements NavigationView.
 
     ImageView achievement, anger, autonomy, complex, distrust, fear, happy, industry, lead, sad, senseOfGuilt, shame, trust;
 
-    ArrayList<ImageView> menuList = null;
-    ArrayList<CMenuData> menuData = null;
+    ArrayList<ImageView> menuList = new ArrayList<ImageView>();
+    ArrayList<CMenuData> menuData = new ArrayList<CMenuData>();
 
     class CMenuData
     {
@@ -57,7 +58,7 @@ public class CEmotionClient extends AppCompatActivity implements NavigationView.
         SetMenuID();
         CEmotionDataList.CData cData = null;
         int i = CEmotionDataList.GetInstance().Size();
-        while(--i > 0)
+        while(--i >= 0)
         {
             cData = CEmotionDataList.GetInstance().Get(i);
 
@@ -69,10 +70,13 @@ public class CEmotionClient extends AppCompatActivity implements NavigationView.
             menuData.add(cMenuData);
         }
 
-        i = menuList.size();
-        while(--i > 0)
+        int size = menuList.size();
+        i = 0;
+        while(i < size)
         {
+            //Log.i("menuList", "draw");
             menuList.get(i).setImageBitmap(menuData.get(i).m_bmpIcon);
+            i++;
         }
 
         /* 네비게이션 드로어 초기화 */
@@ -88,11 +92,6 @@ public class CEmotionClient extends AppCompatActivity implements NavigationView.
         Intent intent = getIntent();
         message = intent.getStringExtra(CMyText.EXTRA_MESSAGE);
         navHeaderTxt.setText(message);
-    }
-
-    private void SetMenuData()
-    {
-
     }
 
     private void SetMenuID()

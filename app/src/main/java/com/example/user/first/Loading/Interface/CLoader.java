@@ -50,7 +50,7 @@ public class CLoader extends Thread
         Log.i("CLoader","0%");
 
         CWebInterface.GetInstance().Request("json_data","https://raw.githubusercontent.com/91blacksheep/Synabro/master/web_data/json_data.data");
-        CWebInterface.GetInstance().Request("Emotion_JSON_DATA","https://github.com/Jo-jangho/Synabro/blob/master/web_data/talkGuideLine_JSON_DATA.data");
+        CWebInterface.GetInstance().Request("Emotion_JSON_DATA", "https://raw.githubusercontent.com/Jo-jangho/Synabro/master/web_data/Emotion_JSON_DATA.data");
 
         CWebInterface.CData cData = null;
         String strJsonData = null;
@@ -96,6 +96,11 @@ public class CLoader extends Thread
         CStoryDataList.GetInstance().Init(strJsonData);
         CStoryDataList.GetInstance().LoadingIcon();
 
+        /**/
+        //CWebInterface.GetInstance().ResClear();
+
+
+
         Log.i("CLoader","60%");
 
         cData = null;
@@ -123,7 +128,7 @@ public class CLoader extends Thread
             {
                 //strData = new String(cData.byteData,"EUC-KR");
                 strJsonData = new String(cData.byteData,"UTF-8");
-                Log.i("web",strJsonData);
+                //Log.i("web",strJsonData);
             }
             catch (UnsupportedEncodingException e)
             {
@@ -135,6 +140,8 @@ public class CLoader extends Thread
 
             break;
         }
+
+        //Log.i("CLoader",strJsonData);
 
         CEmotionDataList.GetInstance().Init(strJsonData);
         CEmotionDataList.GetInstance().LoadingIcon();
