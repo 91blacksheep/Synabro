@@ -57,8 +57,10 @@ public class CEmotionClient extends AppCompatActivity implements NavigationView.
         /* 메뉴 아이콘 생성 */
         SetMenuID ();
         CEmotionDataList.CData cData = null;
-        int i = CEmotionDataList.GetInstance ().Size ();
-        while ( --i >= 0 )
+
+        int size = CEmotionDataList.GetInstance ().Size ();
+        int i = 0;
+        while ( i < size )
         {
             cData = CEmotionDataList.GetInstance ().Get ( i );
 
@@ -68,9 +70,11 @@ public class CEmotionClient extends AppCompatActivity implements NavigationView.
             cMenuData.m_bmpIcon = cData.bmpIcon;
 
             menuData.add ( cMenuData );
+
+            i++;
         }
 
-        int size = menuList.size ();
+        size = menuList.size ();
         i = 0;
         while ( i < size )
         {
@@ -111,19 +115,19 @@ public class CEmotionClient extends AppCompatActivity implements NavigationView.
         trust = (ImageView) findViewById ( R.id.emotion_trust );
 
         /*  */
+        menuList.add ( happy );
+        menuList.add ( sad );
         menuList.add ( achievement );
         menuList.add ( anger );
-        menuList.add ( autonomy );
-        menuList.add ( complex );
-        menuList.add ( distrust );
-        menuList.add ( fear );
-        menuList.add ( happy );
-        menuList.add ( industry );
-        menuList.add ( lead );
-        menuList.add ( sad );
-        menuList.add ( senseOfGuilt );
-        menuList.add ( shame );
         menuList.add ( trust );
+        menuList.add ( distrust );
+        menuList.add ( autonomy );
+        menuList.add ( shame );
+        menuList.add ( lead );
+        menuList.add ( senseOfGuilt );
+        menuList.add ( industry );
+        menuList.add ( complex );
+        menuList.add ( fear );
     }
 
     private void SetNav ()

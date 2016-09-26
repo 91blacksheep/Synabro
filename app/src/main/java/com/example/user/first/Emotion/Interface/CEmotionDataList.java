@@ -127,7 +127,6 @@ public class CEmotionDataList
 
             cData.bmpIcon = bmp;
 
-
             i++;
         }
     }
