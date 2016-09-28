@@ -7,7 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 
-import com.example.user.first.Home.CHome;
+import com.example.user.first.Home.CHomeClient;
 import com.example.user.first.R;
 
 /**
@@ -28,7 +28,7 @@ public class CMyText extends AppCompatActivity
 
     public void sendMessage(View view)
     {
-        Intent intent = new Intent(this, CHome.class);
+        Intent intent = new Intent(this, CHomeClient.class);
         editText = (EditText)findViewById(R.id.edtMyText);
         String message = editText.getText().toString();
         intent.putExtra(EXTRA_MESSAGE, message);

@@ -55,6 +55,33 @@
                         android:orientation="horizontal"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        >
+
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:id="@+id/emotion_happy"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:onClick="onClickButton"
+                            />
+
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:id="@+id/emotion_sad"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:onClick="onClickButton"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:gravity="center_horizontal">
 
@@ -62,20 +89,48 @@
                             android:layout_width="150dp"
                             android:layout_height="150dp"
                             android:id="@+id/emotion_achievement"
-                            android:src="@drawable/emotion_happy"
                             android:layout_marginLeft="10dp"
                             android:layout_marginRight="10dp"
-                            android:onClick="onClickButton" />
+                            android:onClick="onClickButton"
+                            />
 
                         <ImageView
                             android:layout_width="150dp"
                             android:layout_height="150dp"
                             android:id="@+id/emotion_anger"
-                            android:src="@drawable/emotion_sad"
                             android:layout_gravity="center_vertical"
                             android:layout_marginRight="10dp"
                             android:layout_marginLeft="10dp"
                             android:onClick="onClickButton" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center_horizontal" >
+
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:id="@+id/emotion_trust"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:onClick="onClickButton"
+                            android:layout_gravity="center_vertical"
+                            />
+
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:id="@+id/emotion_distrust"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:onClick="onClickButton"
+                            android:layout_gravity="center_vertical"/>
+
                     </LinearLayout>
 
                     <LinearLayout
@@ -89,80 +144,27 @@
                             android:layout_width="150dp"
                             android:layout_height="150dp"
                             android:id="@+id/emotion_autonomy"
-                            android:src="@drawable/emotion_achievement"
                             android:layout_marginLeft="10dp"
                             android:layout_marginRight="10dp"
-                            android:onClick="onClickButton" />
+                            android:onClick="onClickButton"
+                            android:layout_gravity="center_vertical"/>
 
                         <ImageView
                             android:layout_width="150dp"
                             android:layout_height="150dp"
-                            android:id="@+id/emotion_complex"
-                            android:src="@drawable/emotion_anger"
+                            android:id="@+id/emotion_shame"
                             android:layout_gravity="center_vertical"
                             android:layout_marginRight="10dp"
                             android:layout_marginLeft="10dp"
-                            android:onClick="onClickButton" />
+                            android:onClick="onClickButton"
+                            />
+
                     </LinearLayout>
 
                     <LinearLayout
                         android:orientation="horizontal"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:gravity="center_horizontal" >
-
-                        <ImageView
-                            android:layout_width="150dp"
-                            android:layout_height="150dp"
-                            android:id="@+id/emotion_distrust"
-                            android:src="@drawable/emotion_trust"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginRight="10dp"
-                            android:onClick="onClickButton" />
-
-                        <ImageView
-                            android:layout_width="150dp"
-                            android:layout_height="150dp"
-                            android:id="@+id/emotion_fear"
-                            android:src="@drawable/emotion_distrust"
-                            android:layout_gravity="center_vertical"
-                            android:layout_marginRight="10dp"
-                            android:layout_marginLeft="10dp"
-                            android:onClick="onClickButton" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:orientation="horizontal"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:gravity="center_horizontal" >
-
-                        <ImageView
-                            android:layout_width="150dp"
-                            android:layout_height="150dp"
-                            android:id="@+id/emotion_happy"
-                            android:src="@drawable/emotion_autonomy"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginRight="10dp"
-                            android:onClick="onClickButton" />
-
-                        <ImageView
-                            android:layout_width="150dp"
-                            android:layout_height="150dp"
-                            android:id="@+id/emotion_industry"
-                            android:src="@drawable/emotion_shame"
-                            android:layout_gravity="center_vertical"
-                            android:layout_marginRight="10dp"
-                            android:layout_marginLeft="10dp"
-                            android:onClick="onClickButton" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:orientation="horizontal"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_gravity="center_horizontal"
                         android:gravity="center_horizontal" >
 
@@ -170,47 +172,19 @@
                             android:layout_width="150dp"
                             android:layout_height="150dp"
                             android:id="@+id/emotion_lead"
-                            android:src="@drawable/emotion_lead"
                             android:layout_marginLeft="10dp"
                             android:layout_marginRight="10dp"
                             android:onClick="onClickButton" />
-
-                        <ImageView
-                            android:layout_width="150dp"
-                            android:layout_height="150dp"
-                            android:id="@+id/emotion_sad"
-                            android:src="@drawable/emotion_sense_of_guilt"
-                            android:layout_gravity="center_vertical"
-                            android:layout_marginRight="10dp"
-                            android:layout_marginLeft="10dp"
-                            android:onClick="onClickButton" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:orientation="horizontal"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:gravity="center_horizontal" >
 
                         <ImageView
                             android:layout_width="150dp"
                             android:layout_height="150dp"
                             android:id="@+id/emotion_sense_of_guilt"
-                            android:src="@drawable/emotion_industry"
                             android:layout_marginLeft="10dp"
                             android:layout_marginRight="10dp"
-                            android:onClick="onClickButton" />
+                            android:onClick="onClickButton"
+                            />
 
-                        <ImageView
-                            android:layout_width="150dp"
-                            android:layout_height="150dp"
-                            android:id="@+id/emotion_shame"
-                            android:src="@drawable/emotion_complex"
-                            android:layout_gravity="center_vertical"
-                            android:layout_marginRight="10dp"
-                            android:layout_marginLeft="10dp"
-                            android:onClick="onClickButton" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -223,11 +197,50 @@
                         <ImageView
                             android:layout_width="150dp"
                             android:layout_height="150dp"
-                            android:id="@+id/emotion_trust"
-                            android:src="@drawable/emotion_fear"
-                            android:layout_marginLeft="10dp"
+                            android:id="@+id/emotion_industry"
+                            android:layout_gravity="center_vertical"
                             android:layout_marginRight="10dp"
-                            android:onClick="onClickButton" />
+                            android:layout_marginLeft="10dp"
+                            android:onClick="onClickButton"
+                            />
+
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:id="@+id/emotion_complex"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:onClick="onClickButton"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center_horizontal">
+
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:id="@+id/imageView5"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:onClick="onClickButton"
+                            />
+
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:id="@+id/emotion_fear"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:onClick="onClickButton"
+                            android:layout_gravity="center_vertical"/>
 
                     </LinearLayout>
 
@@ -237,10 +250,10 @@
         </LinearLayout>
 
         <RelativeLayout android:id="@+id/rl_left_drawer"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:layout_gravity="start"
-            android:background="#ffffffff" />
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="#ffffffff"
+                        android:layout_gravity="start"/>
 
     </android.support.v4.widget.DrawerLayout>
 </RelativeLayout>

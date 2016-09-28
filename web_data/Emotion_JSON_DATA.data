@@ -1,0 +1,41 @@
+[
+    {
+        "url": "emotion_happy.png"
+    },
+    {
+        "url": "emotion_sad.png"
+    },
+    {
+        "url": "emotion_achievement.png"
+    },
+    {
+        "url": "emotion_anger.png"
+    },
+    {
+        "url": "emotion_trust.png"
+    },
+    {
+        "url": "emotion_distrust.png"
+    },
+    {
+        "url": "emotion_autonomy.png"
+    },
+    {
+        "url": "emotion_shame.png"
+    },
+    {
+        "url": "emotion_lead.png"
+    },
+    {
+        "url": "emotion_sense_of_guilt.png"
+    },
+    {
+        "url": "emotion_industry.png"
+    },
+    {
+        "url": "emotion_complex.png"
+    },
+    {
+        "url": "emotion_fear.png"
+    }
+]

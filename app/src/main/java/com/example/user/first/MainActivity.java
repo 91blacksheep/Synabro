@@ -4,7 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-import com.example.user.first.Loading.Client.CLoading;
+import com.example.user.first.Loading.Client.CLoadingClient;
 
 public class MainActivity extends AppCompatActivity
 {
@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
 
-        Intent intent = new Intent(getApplicationContext(), CLoading.class);
+        Intent intent = new Intent(getApplicationContext(), CLoadingClient.class);
         startActivity(intent);
         finish();
     }
